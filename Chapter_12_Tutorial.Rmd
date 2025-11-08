@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Introduction
 Part one is how to create github account, install github for those who don't have it, link repository? copy and paste url from git into R
-
+could we work on different sections and would that create issues with line numbers?
 
 ## Discuss Data
 Do we need to send invitation to link to repository?
