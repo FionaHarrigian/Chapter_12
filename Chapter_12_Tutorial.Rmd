@@ -4,6 +4,9 @@ author: "Fiona Harrigian"
 date: "2025-11-08"
 output: html_document
 ---
+```{r packages}
+library(ggplot2)
+```
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
