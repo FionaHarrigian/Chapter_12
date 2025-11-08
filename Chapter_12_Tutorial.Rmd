@@ -22,9 +22,13 @@ Do we need to send invitation to link to repository?
 Import CSV into git - all files worked with from day 1 to now
 
 ## References
+<<<<<<< HEAD
 will we have to work on different lines?? will it be possible?
 
-same line???
+will we have to work on different lines?? will it ve possible?
+
+when we are working together, this will appear same line???
+>>>>>>> dbb3cf23349888931e0310ee2ff58305525580f7
 
 ```{r cars}
 summary(cars)
