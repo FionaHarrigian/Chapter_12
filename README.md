@@ -14,6 +14,7 @@ let's both type at the same time.
 does this work??
 >>>>>>> 2e943fb7670a9a28ab8e2186d4fae67e4dd9441e
 
+try again to get to Tshia
 
 
 writting on 20
