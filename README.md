@@ -19,3 +19,7 @@ trying different lines of code
 
 
 
+<<<<<<< HEAD
+=======
+writting on 20
+>>>>>>> 08b51be9799d64e67be9dd50130c8c277fb65c43
