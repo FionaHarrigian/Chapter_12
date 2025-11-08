@@ -12,14 +12,8 @@ code > wrap soft line
 =======
 let's both type at the same time.
 does this work??
-
-trying different lines of code
 >>>>>>> 2e943fb7670a9a28ab8e2186d4fae67e4dd9441e
 
 
 
-
-<<<<<<< HEAD
-=======
 writting on 20
->>>>>>> 08b51be9799d64e67be9dd50130c8c277fb65c43
