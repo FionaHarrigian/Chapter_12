@@ -1,6 +1,6 @@
 ---
 title: "Chapter_12_Tutorial"
-author: "Fiona Harrigian"
+author: "Fiona Harrigian and Tshianeo Ndou"
 date: "2025-11-08"
 output: html_document
 ---
@@ -14,6 +14,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Introduction
+
+# What is Github
 Part one is how to create github account, install github for those who don't have it, link repository? copy and paste url from git into R
 could we work on different sections and would that create issues with line numbers?
 
