@@ -14,6 +14,14 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Introduction
+Throughout this semester, we have discussed making our science reproducible and accessible. We started by learning the concept of reproducible science and why it is so important. We also learned that there is a reproducibility crisis, what might be causing it, and how to address it. To address writing reproducible code, we learned about R markdown files and how to format them in a clear, reproducible way. We next learned how to make bibliographies, appendices, tables, figures, citations, and references in R markdown and how to use settings to best display them. We learned about creating and using functions and lists in R and writing code in a clear, reproducible, and defensive way. 
+
+Then, we discussed the scientific method and how to mitigate the threats to each step of the scientific process. One of the mitigation strategies is using the TOP (Transparency and Openness Promotion) Guidelines, another is the OSF (Open Science Framework). Other mitigation strategies include the FAIR and CARE principles. FAIR principles focus on making data accessible to everyone, whereas CARE principles apply specifically to data involving Indigenous People and emphasize considerations of who benefits from the data, who can collect the data and the responsibilities and ethics surrounding the data. They are technically in opposition to each other but are equally important to consider when conducting research and before sharing data. Connected to this was the concept of a Creative Common license and which would be best to use for your own research. 
+
+Finally, we learned about data management, that it is best to create a data management plan before starting research, and how to manage your data in a way that means it will continue to usable by you, your colleagues, and the general public, as long as such accessibility has been checked by the CARE principles. 
+
+One of the final pieces of making your science reproducible is making sure your data and code are accessible, again and importantly considering the FAIR and CARE principles. During this tutorial, we will introduce Git and Github, which will help make your science more reproducible. Early in this semester, we were given a definition of reproducible science that included having data and code be publicly available.
+
 
 # What is Github
 Part one is how to create github account, install github for those who don't have it, link repository? copy and paste url from git into R
