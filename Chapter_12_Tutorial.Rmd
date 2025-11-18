@@ -22,6 +22,8 @@ Finally, we learned about data management, that it is best to create a data mana
 
 One of the final pieces of making your science reproducible is making sure your data and code are accessible, again and importantly considering the FAIR and CARE principles. During this tutorial, we will introduce Git and Github, which will help make your science more reproducible. Early in this semester, we were given a definition of reproducible science that included having data and code be publicly available.
 
+#Git and GitHub
+Git is a version control system, which keeps track of the changes made to the files stored within it and allows us to return to previous versions. GitHub is the cloud hosting service built on top of Git. It can store data for you remotely, solving the issue of data storage. However, it was not built specifically for researchers, but instead for computer programmers. So at first glance, GitHub can be challenging to understand and use. With some time, the many helpful features of GitHub can become more clear and be used to help us conduct more reproducible research.
 
 # What is Github
 Part one is how to create github account, install github for those who don't have it, link repository? copy and paste url from git into R
