@@ -89,16 +89,16 @@ knitr::include_graphics("Pictures/creatingrepo.png")
 ```
 
 
-```{r red circle, echo=FALSE, fig.cap="Cloning Repository", out.width = '100%'}
-#Cloning you repository
+```{r red_circle, echo=FALSE, fig.cap="Cloning Repository", out.width = '100%'}
+#Cloning your repository
 
 knitr::include_graphics("Pictures/redcircle.png")
 ```
 
 
 
-```{r red_green, echo=FALSE, fig.cap="Interface when pushing and comming" = '100%'}
-#what does red and green colours mean when you ar communicating with your collaborator
+```{r red_green, echo=FALSE, fig.cap="Interface when pushing and comming changes" = '100%'}
+#what does red and green colors mean when you ar communicating with your collaborator
 
 knitr::include_graphics("Pictures/red_green.png")
 ```
