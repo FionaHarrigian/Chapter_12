@@ -92,7 +92,7 @@ knitr::include_graphics("Pictures/redcircle.png")
 
 
 
-```{r red_green, echo=FALSE, fig.cap="Interface when pushing and comming changes" = '100%'}
+```{r red_green, echo=FALSE, fig.cap="Interface when pushing and committing changes", out.width = '100%'}
 #what does red and green colors mean when you ar communicating with your collaborator
 
 knitr::include_graphics("Pictures/red_green.png")
@@ -106,16 +106,12 @@ Import CSV into git - all files worked with from day 1 to now
 ## References
 
 
-```{r cars}
 
-```
 
 ## Including Plots
 
 You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
