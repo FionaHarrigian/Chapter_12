@@ -6,12 +6,19 @@ output: html_document
 ---
 ```{r packages}
 #NEED TO MAKE SURE INCLUDES ALL PACKAGES
+
+library(dplyr)  
+library(kableExtra)
 library(dplyr, tidyverse)
+
 ```
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+
+
 
 # Introduction
 Throughout this semester, we have discussed making our science reproducible and accessible. We started by learning the concept of reproducible science and why it is so important. We also learned that there is a reproducibility crisis, what might be causing it, and how to address it. To address writing reproducible code, we learned about R markdown files and how to format them in a clear, reproducible way. We next learned how to make bibliographies, appendices, tables, figures, citations, and references in R markdown and how to use settings to best display them. We learned about creating and using functions and lists in R and writing code in a clear, reproducible, and defensive way. 
@@ -26,6 +33,18 @@ One of the final pieces of making your science reproducible is making sure your 
 Git is a version control system, which keeps track of the changes made to the files stored within it and allows us to return to previous versions. GitHub is the cloud hosting service built on top of Git. It can store data for you remotely, solving the issue of data storage. However, it was not built specifically for researchers, but instead for computer programmers. So at first glance, GitHub can be challenging to understand and use. With some time, the many helpful features of GitHub can become more clear and be used to help us conduct more reproducible research.
 
 One of these features is data storage and access. When you create a project, which GitHub calls a repository, you can store data and code along with a README.md file that can be used to make your file structure even more clear. It can be particularly useful when several collaborators are working on the same project. Github allows files to be shared and edited, and tracks who edited which files and how they edit the files. Researchers unconnected to the project can also suggest changes to files, if the repository is public, which could provide further checks that help make science more reproducible. Github will store versions of your file indefinitely and for free, and will connect to RStudio Projects, which we will discuss today.
+
+
+
+```{r pressure, echo=FALSE, fig.cap="Invitation for collaboration", out.width = '100%'}
+#when you invite your collaborator, this is how the page will look like 
+
+knitr::include_graphics("Pictures/introrepo.png")
+```
+
+
+
+
 
 1. ordered list
 2. item 2
@@ -60,6 +79,16 @@ knitr::kable(definitions, caption = "Useful definitions when working with Git an
     format = "html") %>%
     kableExtra::kable_styling(c("striped", "scale_down"))
 ```
+
+
+```{r pressure, echo=FALSE, fig.cap="Creating a remote repository", out.width = '100%'}
+#Creating a remote repository
+
+knitr::include_graphics("Pictures/creatingrepo.png")
+```
+
+
+
 
 ## Discuss Data
 Do we need to send invitation to link to repository?
