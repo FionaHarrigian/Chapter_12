@@ -6,7 +6,7 @@ output:
   bookdown::html_document2: 
     toc: TRUE
 ---
-```{r packages, results='hide'}
+```{r packages, results='hide', message = FALSE, warning = FALSE}
 #NEED TO MAKE SURE INCLUDES ALL PACKAGES
 
 library(dplyr)  
@@ -16,7 +16,7 @@ library(dplyr, tidyverse)
 ```
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 
