@@ -35,13 +35,12 @@ One of these features is data storage and access. When you create a project, whi
    + sub-item 2
 
 #1.1 Learning Objectives
-Learn how to create a github account
-Download and Install and git
-Learn how to set up git with your user name and email.
-Create repository in github, project in R studio, work with partner to clone.
-(maybe as homework assignment) push changes, pull changes, commit changes, how to deal with merging issues - ask Sven?
-Turn on notifications for push changes
-
++Learn how to create a github account
++Download and Install and git
++Learn how to set up git with your user name and email.
++Create repository in github, project in R studio, work with partner to clone.
++Turn on notifications for push changes
++(maybe as homework assignment) push changes, pull changes, commit changes, how to deal with merging issues - ask Sven?
 
 # What is Github
 #Syntax to add hyperlink
