@@ -2,7 +2,9 @@
 title: "Chapter_12_Tutorial"
 author: "Fiona Harrigian and Tshianeo Ndou"
 date: "2025-11-08"
-output: html_document
+output:
+  bookdown::html_document2: 
+    toc: TRUE
 ---
 ```{r packages, results='hide'}
 #NEED TO MAKE SURE INCLUDES ALL PACKAGES
