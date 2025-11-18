@@ -38,7 +38,7 @@ One of these features is data storage and access. When you create a project, whi
 
 
 
-```{r introrepo, echo=FALSE, fig.cap="Invitation for collaboration", out.width = '100%'}
+```{r pressure, echo=FALSE, fig.cap="Invitation for collaboration", out.width = '100%'}
 #when you invite your collaborator, this is how the page will look like 
 
 knitr::include_graphics("Pictures/introrepo.png")
@@ -54,12 +54,12 @@ knitr::include_graphics("Pictures/introrepo.png")
    + sub-item 2
 
 #1.1 Learning Objectives
-*Learn how to create a github account
-*Download and Install and git
-*Learn how to set up git with your user name and email.
-*Create repository in github, project in R studio, work with partner to clone.
-*Turn on notifications for push changes
-*(maybe as homework assignment) push changes, pull changes, commit changes, how to deal with merging issues - ask Sven?
++Learn how to create a github account
++Download and Install and git
++Learn how to set up git with your user name and email.
++Create repository in github, project in R studio, work with partner to clone.
++Turn on notifications for push changes
++(maybe as homework assignment) push changes, pull changes, commit changes, how to deal with merging issues - ask Sven?
 
 # What is Github
 #Syntax to add hyperlink
@@ -82,13 +82,18 @@ knitr::kable(definitions, caption = "Useful definitions when working with Git an
 ```
 
 
-```{r creatingrepo, echo=FALSE, fig.cap="Creating a remote repository", out.width = '100%'}
+```{r pressure, echo=FALSE, fig.cap="Creating a remote repository", out.width = '100%'}
 #Creating a remote repository
 
 knitr::include_graphics("Pictures/creatingrepo.png")
 ```
 
 
+```{r pressure, echo=FALSE, fig.cap="Cloning Repository", out.width = '100%'}
+#Cloning you repository
+
+knitr::include_graphics("Pictures/redcircle.png")
+```
 
 
 ## Discuss Data
@@ -98,9 +103,16 @@ Import CSV into git - all files worked with from day 1 to now
 ## References
 
 
+```{r cars}
+
+```
+
 ## Including Plots
 
 You can also embed plots, for example:
 
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
