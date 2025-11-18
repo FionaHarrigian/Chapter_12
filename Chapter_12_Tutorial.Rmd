@@ -13,7 +13,7 @@ library(ggplot2)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Introduction
+# Introduction
 Throughout this semester, we have discussed making our science reproducible and accessible. We started by learning the concept of reproducible science and why it is so important. We also learned that there is a reproducibility crisis, what might be causing it, and how to address it. To address writing reproducible code, we learned about R markdown files and how to format them in a clear, reproducible way. We next learned how to make bibliographies, appendices, tables, figures, citations, and references in R markdown and how to use settings to best display them. We learned about creating and using functions and lists in R and writing code in a clear, reproducible, and defensive way. 
 
 Then, we discussed the scientific method and how to mitigate the threats to each step of the scientific process. One of the mitigation strategies is using the TOP (Transparency and Openness Promotion) Guidelines, another is the OSF (Open Science Framework). Other mitigation strategies include the FAIR and CARE principles. FAIR principles focus on making data accessible to everyone, whereas CARE principles apply specifically to data involving Indigenous People and emphasize considerations of who benefits from the data, who can collect the data and the responsibilities and ethics surrounding the data. They are technically in opposition to each other but are equally important to consider when conducting research and before sharing data. Connected to this was the concept of a Creative Common license and which would be best to use for your own research. 
@@ -22,12 +22,17 @@ Finally, we learned about data management, that it is best to create a data mana
 
 One of the final pieces of making your science reproducible is making sure your data and code are accessible, again and importantly considering the FAIR and CARE principles. During this tutorial, we will introduce Git and Github, which will help make your science more reproducible. Early in this semester, we were given a definition of reproducible science that included having data and code be publicly available.
 
-#Git and GitHub
+## Git and GitHub
 Git is a version control system, which keeps track of the changes made to the files stored within it and allows us to return to previous versions. GitHub is the cloud hosting service built on top of Git. It can store data for you remotely, solving the issue of data storage. However, it was not built specifically for researchers, but instead for computer programmers. So at first glance, GitHub can be challenging to understand and use. With some time, the many helpful features of GitHub can become more clear and be used to help us conduct more reproducible research.
 
 One of these features is data storage and access. When you create a project, which GitHub calls a repository, you can store data and code along with a README.md file that can be used to make your file structure even more clear. It can be particularly useful when several collaborators are working on the same project. Github allows files to be shared and edited, and tracks who edited which files and how they edit the files. Researchers unconnected to the project can also suggest changes to files, if the repository is public, which could provide further checks that help make science more reproducible. Github will store versions of your file indefinitely and for free, and will connect to RStudio Projects, which we will discuss today.
 
 # What is Github
+#Syntax to add hyperlink
+[text](link)
+
+#Example to provide hyperlink to RStudio
+[RStudio](https://www.rstudio.com)
 Part one is how to create github account, install github for those who don't have it, link repository? copy and paste url from git into R
 could we work on different sections and would that create issues with line numbers?
 
@@ -39,7 +44,7 @@ Import CSV into git - all files worked with from day 1 to now
 
 
 ```{r cars}
-summary(cars)
+
 ```
 
 ## Including Plots
