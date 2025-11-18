@@ -81,6 +81,14 @@ knitr::kable(definitions, caption = "Useful definitions when working with Git an
 knitr::include_graphics("Pictures/creatingrepo.png")
 ```
 
+```{r push_notifications, echo=FALSE, fig.cap="Setting up push notifications", out.width = '100%'}
+#show how to do push notifications
+knitr::include_graphics("Pictures/settings.jpg")
+
+knitr::include_graphics("Pictures/email_not.jpg")
+
+```
+
 
 ```{r red_circle, echo=FALSE, fig.cap="Cloning Repository", out.width = '100%'}
 #Cloning your repository
