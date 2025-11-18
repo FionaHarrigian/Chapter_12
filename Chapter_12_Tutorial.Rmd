@@ -52,14 +52,19 @@ knitr::include_graphics("Pictures/introrepo.png")
 2. item 2
    + sub-item 1
    + sub-item 2
+   
+* unordered list
+* item 2
+  + sub-item 1
+  + sub-item 2
 
 #1.1 Learning Objectives
-*Learn how to create a github account
-*Download and Install and git
-*Learn how to set up git with your user name and email.
-*Create repository in github, project in R studio, work with partner to clone.
-*Turn on notifications for push changes
-*(maybe as homework assignment) push changes, pull changes, commit changes, how to deal with merging issues - ask Sven?
+* Learn how to create a github account
+* Download and Install Git
+* Learn how to set up git with your user name and email.
+* Create repository in github, project in R studio, work with partner to clone.
+* Turn on notifications for push changes
+* Homework assignment: push changes, pull changes, commit changes, how to deal with merging issues
 
 # What is Github
 #Syntax to add hyperlink
