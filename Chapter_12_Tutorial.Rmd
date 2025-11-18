@@ -82,14 +82,14 @@ knitr::kable(definitions, caption = "Useful definitions when working with Git an
 ```
 
 
-```{r pressure, echo=FALSE, fig.cap="Creating a remote repository", out.width = '100%'}
+```{r creatingrepo, echo=FALSE, fig.cap="Creating a remote repository", out.width = '100%'}
 #Creating a remote repository
 
 knitr::include_graphics("Pictures/creatingrepo.png")
 ```
 
 
-```{r pressure, echo=FALSE, fig.cap="Cloning Repository", out.width = '100%'}
+```{r red circle, echo=FALSE, fig.cap="Cloning Repository", out.width = '100%'}
 #Cloning you repository
 
 knitr::include_graphics("Pictures/redcircle.png")
@@ -97,7 +97,7 @@ knitr::include_graphics("Pictures/redcircle.png")
 
 
 
-```{r pressure, echo=FALSE, fig.cap="Interface when pushing and comming" = '100%'}
+```{r red_green, echo=FALSE, fig.cap="Interface when pushing and comming" = '100%'}
 #what does red and green colours mean when you ar communicating with your collaborator
 
 knitr::include_graphics("Pictures/red_green.png")
