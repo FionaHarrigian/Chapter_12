@@ -4,7 +4,7 @@ author: "Fiona Harrigian and Tshianeo Ndou"
 date: "2025-11-08"
 output: html_document
 ---
-```{r packages}
+```{r packages, results='hide'}
 #NEED TO MAKE SURE INCLUDES ALL PACKAGES
 library(dplyr, tidyverse)
 ```
