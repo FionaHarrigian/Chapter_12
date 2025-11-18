@@ -46,8 +46,6 @@ knitr::include_graphics("Pictures/introrepo.png")
 
 
 
-
-
 # Learning Objectives
 * Learn how to create a github account
 * Download and Install and git
@@ -56,12 +54,9 @@ knitr::include_graphics("Pictures/introrepo.png")
 * Turn on notifications for push changes
 * Homework assignment: push changes, pull changes, commit changes, how to deal with merging issues
 
-## Setting Up
-### Creating a GitHub Account
-First, we need to create a GitHub account. To create a github account, visit [Github](https://github.com/). Register with your BSU valid email address and create an account for free. Good news if you already have git, just login with your details!
 # What is Github
-Syntax to add hyperlink
-[text](link)
+#Syntax to add hyperlink
+[the text you want to appear for the link comes here](link)
 
 #Example to provide hyperlink to RStudio
 [RStudio](https://www.rstudio.com)
@@ -105,6 +100,9 @@ knitr::include_graphics("Pictures/red_green.png")
 ## Discuss Data
 Do we need to send invitation to link to repository?
 Import CSV into git - all files worked with from day 1 to now
+
+
+
 
 ## References
 
