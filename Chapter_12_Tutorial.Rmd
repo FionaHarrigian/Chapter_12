@@ -81,7 +81,7 @@ knitr::kable(definitions, caption = "Useful definitions when working with Git an
 knitr::include_graphics("Pictures/creatingrepo.png")
 ```
 
-```{r push_notifications, echo=FALSE, fig.cap="Setting up push notifications", out.width = '100%'}
+```{r pushnotifications, echo=FALSE, fig.cap="Setting up push notifications", out.width = '100%'}
 #show how to do push notifications
 knitr::include_graphics("Pictures/settings.jpg")
 
@@ -90,7 +90,7 @@ knitr::include_graphics("Pictures/email_not.jpg")
 ```
 
 
-```{r red_circle, echo=FALSE, fig.cap="Cloning Repository", out.width = '100%'}
+```{r redcircle, echo=FALSE, fig.cap="Cloning Repository", out.width = '100%'}
 #Cloning your repository
 
 knitr::include_graphics("Pictures/redcircle.png")
@@ -98,7 +98,7 @@ knitr::include_graphics("Pictures/redcircle.png")
 
 
 
-```{r red_green, echo=FALSE, fig.cap="Interface when pushing and committing changes", out.width = '100%'}
+```{r redgreen, echo=FALSE, fig.cap="Interface when pushing and committing changes", out.width = '100%'}
 #what does red and green colors mean when you ar communicating with your collaborator
 
 knitr::include_graphics("Pictures/red_green.png")
