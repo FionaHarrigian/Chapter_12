@@ -96,7 +96,11 @@ knitr::include_graphics("Pictures/email_not.jpg")
 knitr::include_graphics("Pictures/redcircle.png")
 ```
 
+```{r gitversion, echo=FALSE, fig.cap="Create an R Markdown document in RStudio ", out.width = '100%'}
+#Cloning your repository
 
+knitr::include_graphics("Pictures/gitversion.png")
+```
 
 ```{r red_green, echo=FALSE, fig.cap="Interface when pushing and committing changes", out.width = '100%'}
 #what does red and green colors mean when you ar communicating with your collaborator
@@ -110,17 +114,11 @@ Do we need to send invitation to link to repository?
 Import CSV into git - all files worked with from day 1 to now
 
 
-
-
 ## References
-
-
 
 
 ## Including Plots
 
 You can also embed plots, for example:
-
-
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
