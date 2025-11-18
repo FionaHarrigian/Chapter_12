@@ -2,9 +2,11 @@
 title: "Chapter_12_Tutorial"
 author: "Fiona Harrigian and Tshianeo Ndou"
 date: "2025-11-08"
-output: html_document
+output:
+  bookdown::html_document2: 
+    toc: TRUE
 ---
-```{r packages}
+```{r packages, results='hide'}
 #NEED TO MAKE SURE INCLUDES ALL PACKAGES
 
 library(dplyr)  
@@ -52,13 +54,12 @@ knitr::include_graphics("Pictures/introrepo.png")
    + sub-item 2
 
 #1.1 Learning Objectives
-Learn how to create a github account
-Download and Install and git
-Learn how to set up git with your user name and email.
-Create repository in github, project in R studio, work with partner to clone.
-(maybe as homework assignment) push changes, pull changes, commit changes, how to deal with merging issues - ask Sven?
-Turn on notifications for push changes
-
++Learn how to create a github account
++Download and Install and git
++Learn how to set up git with your user name and email.
++Create repository in github, project in R studio, work with partner to clone.
++Turn on notifications for push changes
++(maybe as homework assignment) push changes, pull changes, commit changes, how to deal with merging issues - ask Sven?
 
 # What is Github
 #Syntax to add hyperlink
