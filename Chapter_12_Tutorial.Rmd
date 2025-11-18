@@ -58,7 +58,7 @@ knitr::include_graphics("Pictures/introrepo.png")
   + sub-item 1
   + sub-item 2
 
-#1.1 Learning Objectives
+# Learning Objectives
 * Learn how to create a github account
 * Download and Install Git
 * Learn how to set up git with your user name and email.
