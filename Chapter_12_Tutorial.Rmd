@@ -96,6 +96,14 @@ knitr::include_graphics("Pictures/redcircle.png")
 ```
 
 
+
+```{r pressure, echo=FALSE, fig.cap="Interface when pushing and comming" = '100%'}
+#what does red and green colours mean when you ar communicating with your collaborator
+
+knitr::include_graphics("Pictures/red_green.png")
+```
+
+
 ## Discuss Data
 Do we need to send invitation to link to repository?
 Import CSV into git - all files worked with from day 1 to now
