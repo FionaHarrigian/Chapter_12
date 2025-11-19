@@ -11,6 +11,7 @@ output:
 
 library(dplyr)  
 library(kableExtra)
+#install.packages("rio")
 library(dplyr, tidyverse, rio)
 
 ```
