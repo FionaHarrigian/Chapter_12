@@ -126,7 +126,7 @@ When you and your collaborators make changes, you can see the changes if you hav
 * Click on Settings on the upper right while in the repository you just created (or any you need notifications for).
 * Scroll down to the bottom of the list of settings and in the lower left corner, click on Email notifications.
 You should see the Email notifications page. 
-* Make sure to add the email address you would like to receive notifications on, check the box next to Active if not already checked, then press Update settings.
+* Make sure to add the email address you would like to receive notifications on, check the box next to Active if not already checked, then press Update settings. 
 
 
 ```{r emailnot, echo=FALSE, fig.cap="Admin email notification", out.width = '100%'}
