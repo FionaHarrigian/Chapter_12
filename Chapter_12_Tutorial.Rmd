@@ -85,6 +85,7 @@ knitr::kable(definitions, caption = "Useful definitions when working with Git an
 There are two ways to create a new repository on GitHub:
 1. Create a new ‘folder’ or ‘directory’ on your local computer and then push that into github.
 2. Create a remote repository on Github and then clone that repository into your local computer which can then be updated and pushed back into Github. Make sure that the name of your repository matches with the one you will be cloning. 
+3. Create a new ‘folder’ or ‘directory’ on your local computer and then push that into github.
 
 To avoid errors and save some time name your repository and the clone repository as “Chapter_12”.
 
