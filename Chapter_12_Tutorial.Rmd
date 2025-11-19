@@ -119,12 +119,18 @@ knitr::include_graphics("Pictures/redcircle.png")
 knitr::include_graphics("Pictures/gitversion.png")
 ```
 
-```{r redgreen, echo=FALSE, fig.cap="Interface when pushing and committing changes:#Do not commit at the same time, Git will break", out.width = '100%'}
+```{r redgreen, echo=FALSE, fig.cap="Interface when pushing and committing changes", out.width = '100%'}
 #what does red and green colors mean when you are communicating with your collaborator
 
 knitr::include_graphics("Pictures/red_green.png")
 ```
 
+#When comminting changes:
+
+* Do not commit at the same time, Git does not like it. it will break
+* Make sure the box for the doc/file you are working on is checked before (blue tick) before you push.
+* Write something on the commit box so that your partner can track changes. 
+*To avoid git errors, communicate with your partner when pushing and pulling. It is good to keep track and not get gi confused.  
 
 ## Discuss Data
 Do we need to send invitation to link to repository?
