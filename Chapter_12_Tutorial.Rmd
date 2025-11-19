@@ -164,6 +164,20 @@ Import CSV into git - all files worked with from day 1 to now
 
 ## References
 
+[2nd edition reproducible Research with R and Rstudio](https://englianhu.wordpress.com/wp-content/uploads/2016/01/reproducible-research-with-r-and-studio-2nd-edition.pdf)
+
+[3RD edition reproducuble Research with R and Rstudio]((https://boisestate.on.worldcat.org/search?queryString=gandrud%20reproducible&bookReviews=off&idDetect=true&clusterResults=true&groupVariantRecords=false)
+
+[github for dummies](https://www.youtube.com/watch?v=mJ-qvsxPHpY&t=859s) (
+
+[Github control version](https://www.youtube.com/watch?v=HVsySz-h9r4&t=9s)
+
+
+
+
+
+
+
 
 <<<<<<< HEAD
 ## Including Plots
