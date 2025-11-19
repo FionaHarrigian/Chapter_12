@@ -147,7 +147,7 @@ knitr::include_graphics("Pictures/red_green.png")
 
 #When comminting changes:
 
-* Do not commit at the same time, Git does not like it. it will break
+* Do not commit at the same time, Git does not like it. It will break
 * Make sure the box for the doc/file you are working on is checked before (blue tick) before you push.
 * Write something on the commit box so that your partner can track changes. 
 *To avoid git errors, communicate with your partner when pushing and pulling. It is good to keep track and not get git confused.  
@@ -157,27 +157,16 @@ Do we need to send invitation to link to repository?
 Import CSV into git - all files worked with from day 1 to now
 
 
-## References
+## Relevant resources
+
 
 [2nd edition reproducible Research with R and Rstudio](https://englianhu.wordpress.com/wp-content/uploads/2016/01/reproducible-research-with-r-and-studio-2nd-edition.pdf)
 
-[3RD edition reproducuble Research with R and Rstudio]((https://boisestate.on.worldcat.org/search?queryString=gandrud%20reproducible&bookReviews=off&idDetect=true&clusterResults=true&groupVariantRecords=false)
+[3RD edition reproducuble Research with R and Rstudio](https://boisestate.on.worldcat.org/search?queryString=gandrud%20reproducible&bookReviews=off&idDetect=true&clusterResults=true&groupVariantRecords=false)
 
-[github for dummies](https://www.youtube.com/watch?v=mJ-qvsxPHpY&t=859s) (
+[Github for dummies](https://www.youtube.com/watch?v=mJ-qvsxPHpY&t=859s)
 
 [Github control version](https://www.youtube.com/watch?v=HVsySz-h9r4&t=9s)
 
 
 
-
-
-
-
-
-<<<<<<< HEAD
-## Including Plots
-You can also embed plots, for example:
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
-=======
->>>>>>> f3fd032ba6d8c0e2fdfdb101547fb846ae4ac67e
