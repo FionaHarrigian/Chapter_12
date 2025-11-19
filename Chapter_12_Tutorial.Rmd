@@ -168,20 +168,39 @@ knitr::include_graphics("Pictures/red_green.png")
 By now, you should have created a repository of your own and linked it with a matching project in RStudio. The next piece of working in github is to practice working with a collaborator.
 
 In pairs, you will:
+
 * Choose one of the pair to be the admin and one to be the collaborator. 
 
-* The admin will go to the settings of their repository, then click on Collaborators in the upper left area of the settings.You’ll be prompted to login, once you do, you’ll get to the collaborators screen. 
+* The admin will go to the settings of their repository, then click on Collaborators in the upper left area of the settings. You’ll be prompted to login, once you do, you’ll get to the collaborators screen. 
+
+```{r activity1, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("Pictures/collab_add.jpg")
+knitr::include_graphics("Pictures/login_screen.jpg")
+knitr::include_graphics("Pictures/collab_admin.jpg")
+```
 
 * Add your partner by clicking the add people button and searching for your partner’s GitHub account name (check with them, sometimes it may be different from their name, include numbers, etc.)
+
+```{r activity2, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("Pictures/manage_access.jpg")
+```
 
 * Click Add to repository, your partner should get a code in an email to access your repository.
 
 * Once the collaborator partner finds the admin’s repository, click on the green code button in the upper right hand corner.
 
-* Copy the HTTPS URL with the box button to the right of the url.
-Follow the directions to clone your repository in RStudio as presented in section (need to fill in).
+```{r activity3, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("Pictures/green_code_button.jpg")
+```
 
-* Once each of you have the repository open in RStudio, one will go first, writing a sentence in the README.md, saving the your local file, committing the change (Figure \@ref(fig:code_chunk_ID))), pushing the change to the remote GitHub repository file, then the other partner pulls that change with the down pull arrow and adds their own sentence. 
+* Copy the HTTPS URL with the box button to the right of the url.
+Follow the directions to clone your repository in RStudio as presented in section 2.2.
+
+```{r activity4, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("Pictures/copy_link.jpg")
+```
+
+* Once each of you have the repository open in RStudio, one will go first, writing a sentence in the README.md, saving the your local file, committing the change (Figure \@ref(fig:redgreen))), pushing the change to the remote GitHub repository file, then the other partner pulls that change with the down pull arrow and adds their own sentence. 
 
 * Do a repeat of this exercise until you have 3 sentences each (or 1 each for time).
 * Have conversation with each other (Fiona and Tshia will push and pull and demonstrate on the projector).
@@ -194,6 +213,10 @@ As you read more papers, interact with collaborators, and become a scientist doi
 * One example of a public repository is Sven’s repository for this class [Reproducible 603](https://github.com/svenbuerki/EEB603_Reproducible_Science). Following the link, you can see his repository, with all the folders and files inside displayed in a list. If you scroll to the bottom, you can see the README with information about this repository/class.
 
 * Another example of a public repository is one that was made as part of a paper submission. Fiona read a cool microbial ecology paper that tracked the ecological and evolutionary responses of Curtobacterium over an elevation gradient in Southern California. In the paper, there is a section that says Data Availability. Following the [Link](https://github.com/alex-b-chase/curtoEvol) to their github, we can see a similar set of folders and files, as well as a README.
+
+```{r Chasedata, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("Pictures/Chase_et_al_2021_data_availability.jpg")
+```
 
 * For either repository, find a data file. Usually, you will have the specific data in mind and may have background for the name you are looking for. However, sometimes repositories can be unclear. Use what we have learned in class to identify data, whether a .csv file, a .txt file, or a .xlsx file. 
 
