@@ -196,12 +196,6 @@ As you read more papers, interact with collaborators, and become a scientist doi
 * For either repository, find a data file. Usually, you will have the specific data in mind and may have background for the name you are looking for. However, sometimes repositories can be unclear. Use what we have learned in class to identify data, whether a .csv file, a .txt file, or a .xlsx file. 
 
 
-
-
-
-
-
-
 ## Relevant resources
 
 
