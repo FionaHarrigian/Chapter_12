@@ -99,14 +99,6 @@ For this tutorial, we will be using the second method.
 knitr::include_graphics("Pictures/creatingrepo.png")
 ```
 
-```{r pushnotifications, echo=FALSE, fig.cap="Setting up push notifications", out.width = '100%'}
-#show how to do push notifications
-knitr::include_graphics("Pictures/settings.jpg")
-
-knitr::include_graphics("Pictures/email_not.jpg")
-
-```
-
 
 ```{r redcircle, echo=FALSE, fig.cap="Cloning Repository", out.width = '100%'}
 #Cloning your repository
@@ -130,9 +122,12 @@ You should see the Email notifications page.
 
 
 ```{r emailnot, echo=FALSE, fig.cap="Admin email notification", out.width = '100%'}
-#Cloning your repository
+#show how to do push notifications
+knitr::include_graphics("Pictures/settings.jpg")
 
 knitr::include_graphics("Pictures/email_not.jpg")
+
+knitr::include_graphics("Pictures/push_not.jpg")
 ```
 
 
