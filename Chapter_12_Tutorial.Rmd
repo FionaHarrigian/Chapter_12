@@ -203,9 +203,9 @@ To import data into RStudio, go to your repository in GitHub. Find the data file
 
 ```{r importdata}
 # Paste URL into url object
-url <-"PASTE HERE"
+#url <-"PASTE HERE"
 # Download data
-YOUR_data <- rio::import(url, format = "csv")
+#YOUR_data <- rio::import(url, format = "csv")
 ```
 
 
