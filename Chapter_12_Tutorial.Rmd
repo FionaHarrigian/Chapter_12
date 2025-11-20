@@ -20,8 +20,19 @@ library(dplyr, tidyverse, rio)
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-
-
+Sven's tips
+Day 1, Day 2 make split clear, make homework or activity clear
+headers are learning outcomes, hyper(?)link learning outcomes to each section
+add terms to learning outcomes, make clear what each piece will be for later
+some more context, best way to communicate
+call attention to pieces with bolding
+images all squished, give space and use numbers, plus more text?
+only include figures if cross referenced in text
+make sure good enough for other labs, people outside of class too
+email Monday/Tuesday of Thanksgiving week
+make resources more clear than in end section
+use hyperlinks
+make table of contents float (float=TRUE argument) so can help navigate
 
 # Introduction
 Throughout this semester, we have discussed making our science reproducible and accessible. We started by learning the concept of reproducible science and why it is so important. We also learned that there is a reproducibility crisis, what might be causing it, and how to address it. To address writing reproducible code, we learned about R markdown files and how to format them in a clear, reproducible way. We next learned how to make bibliographies, appendices, tables, figures, citations, and references in R markdown and how to use settings to best display them. We learned about creating and using functions and lists in R and writing code in a clear, reproducible, and defensive way. 
