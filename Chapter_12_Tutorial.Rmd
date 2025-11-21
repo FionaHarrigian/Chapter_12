@@ -65,8 +65,8 @@ knitr::include_graphics("Pictures/introrepo.png")
 # Learning Objectives
 * Learn how to create a GitHub account
 * Download and Install Git
-* Learn how to set up Git with your user name and email.
-* Create repository in github, project in R studio, work with partner to clone.
+* Useful terms for working with Git and GitHub
+* Create repository in GitHub, project in R studio, work with partner to clone
 * Turn on notifications for push changes
 * Homework assignment: push changes, pull changes, commit changes, how to deal with merging issues
 
@@ -79,7 +79,7 @@ Download and install Git on your local computer using [this link](https://git-sc
 ### Set your R Terminal to Git Bash.
 Make sure your settings are up to date by going to Tools –> Global Options –> Terminal –> under the General Tab –> New Terminals Open with: GitBash –> Apply.
 
-### Useful Terms for working with Git and GitHub
+## Useful terms for working with Git and GitHub
 As we work today and for your future Git adventures, here are a few useful terms and their definitions.
 
 ```{r definitions}
