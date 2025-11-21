@@ -66,7 +66,8 @@ knitr::include_graphics("Pictures/introrepo.png")
 * Learn how to create a GitHub account
 * Download and Install Git
 * Useful terms for working with Git and GitHub
-* Create repository in GitHub, project in R studio, work with partner to clone
+* Create a remote repository on GitHub
+* project in R studio, work with partner to clone
 * Turn on notifications for push changes
 * Homework assignment: push changes, pull changes, commit changes, how to deal with merging issues
 
@@ -94,8 +95,8 @@ knitr::kable(definitions, caption = "Useful definitions when working with Git an
 ```
 
 ## Create a remote repository on GitHub
-There are two ways to create a new repository on GitHub:
-1. Create a new ‘folder’ or ‘directory’ on your local computer and then push that into github.
+There are three ways to create a new repository on GitHub:
+1. Create a new directory on your local computer using your computer's command line and then push that into GitHub using the terminal (check this!). More detailed instructions are available in (figure out how to cite Gandrud 2020 and put into reference bibliography section)
 2. Create a remote repository on Github and then clone that repository into your local computer which can then be updated and pushed back into Github. Make sure that the name of your repository matches with the one you will be cloning. 
 3. Create a new ‘folder’ or ‘directory’ on your local computer and then push that into github.
 
@@ -180,9 +181,9 @@ By now, you should have created a repository of your own and linked it with a ma
 
 In pairs, you will:
 
-* Choose one of the pair to be the admin and one to be the collaborator. 
+1. Choose one of the pair to be the admin and one to be the collaborator. 
 
-* The admin will go to the settings of their repository, then click on Collaborators in the upper left area of the settings. You’ll be prompted to login, once you do, you’ll get to the collaborators screen. 
+2. The admin will go to the settings of their repository, then click on Collaborators in the upper left area of the settings. You’ll be prompted to login, once you do, you’ll get to the collaborators screen. 
 
 ```{r activity1, echo=FALSE, out.width = '100%'}
 knitr::include_graphics("Pictures/collab_add.jpg")
@@ -190,13 +191,13 @@ knitr::include_graphics("Pictures/login_screen.jpg")
 knitr::include_graphics("Pictures/collab_admin.jpg")
 ```
 
-* Add your partner by clicking the add people button and searching for your partner’s GitHub account name (check with them, sometimes it may be different from their name, include numbers, etc.)
+3. Add your partner by clicking the add people button and searching for your partner’s GitHub account name (check with them, sometimes it may be different from their name, include numbers, etc.)
 
 ```{r activity2, echo=FALSE, out.width = '100%'}
 knitr::include_graphics("Pictures/manage_access.jpg")
 ```
 
-* Click Add to repository, your partner should get a code in an email to access your repository.
+4. Click Add to repository, your partner should get a code in an email to access your repository.
 
 * Once the collaborator partner finds the admin’s repository, click on the green code button in the upper right hand corner.
 
