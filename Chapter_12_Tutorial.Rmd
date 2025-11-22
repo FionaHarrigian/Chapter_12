@@ -206,7 +206,7 @@ knitr::include_graphics("Pictures/green_code_button.jpg")
 ```
 
 6. Copy the HTTPS URL with the box button to the right of the url.
-Follow the directions to clone your repository in RStudio as presented in section 2.2.
+Follow the directions to clone your repository in RStudio as presented in section \@ref(2.2).
 
 ```{r activity4, echo=FALSE, out.width = '100%'}
 knitr::include_graphics("Pictures/copy_link.jpg")
