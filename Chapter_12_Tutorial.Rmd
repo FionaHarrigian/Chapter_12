@@ -199,22 +199,22 @@ knitr::include_graphics("Pictures/manage_access.jpg")
 
 4. Click Add to repository, your partner should get a code in an email to access your repository.
 
-* Once the collaborator partner finds the admin’s repository, click on the green code button in the upper right hand corner.
+5. Once the collaborator partner finds the admin’s repository, click on the green code button in the upper right hand corner.
 
 ```{r activity3, echo=FALSE, out.width = '100%'}
 knitr::include_graphics("Pictures/green_code_button.jpg")
 ```
 
-* Copy the HTTPS URL with the box button to the right of the url.
+6. Copy the HTTPS URL with the box button to the right of the url.
 Follow the directions to clone your repository in RStudio as presented in section 2.2.
 
 ```{r activity4, echo=FALSE, out.width = '100%'}
 knitr::include_graphics("Pictures/copy_link.jpg")
 ```
 
-* Once each of you have the repository open in RStudio, one will go first, writing a sentence in the README.md, saving the your local file, committing the change (Figure \@ref(fig:redgreen))), pushing the change to the remote GitHub repository file, then the other partner pulls that change with the down pull arrow and adds their own sentence. 
+7. Once each of you have the repository open in RStudio, one will go first, writing a sentence in the README.md, saving the your local file, committing the change (Figure \@ref(fig:redgreen))), pushing the change to the remote GitHub repository file, then the other partner pulls that change with the down pull arrow and adds their own sentence. 
 
-* Do a repeat of this exercise until you have 3 sentences each (or 1 each for time).
+8. Do a repeat of this exercise until you have 3 sentences each (or 1 each for time).
 * Have conversation with each other (Fiona and Tshia will push and pull and demonstrate on the projector).
 
 # Import data into R from github repository
