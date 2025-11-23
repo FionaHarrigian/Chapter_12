@@ -10,19 +10,69 @@ output:
     toc_depth: 3
     number_sections: true
 ---
-```{r packages, results='hide', message = FALSE, warning = FALSE}
-#NEED TO MAKE SURE INCLUDES ALL PACKAGES
 
-library(dplyr)  
-library(kableExtra)
-#install.packages("rio")
-library(dplyr, tidyverse, rio)
+```{r packages, echo=FALSE, warning=FALSE, include=FALSE}
+###~~~
+# Load R packages
+###~~~
+#Create a vector w/ the required R packages
+# --> If you have a new dependency, don't forget to add it in this vector
+pkg <- c("knitr", "rmarkdown", "bookdown", "formattable", "kableExtra", "dplyr", "magrittr", "prettydoc", "htmltools", "knitcitations", "bibtex", "devtools","tidyverse","rio")
 
+##~~~
+#2. Check if pkg are already installed on your computer
+##~~~
+print("Check if packages are installed")
+#This line outputs a list of packages that are not installed
+new.pkg <- pkg[!(pkg %in% installed.packages())]
+
+##~~~
+#3. Install missing packages
+##~~~
+# Use an if/else statement to check whether packages have to be installed
+# WARNING: If your target R package is not deposited on CRAN then you need to adjust code/function
+if(length(new.pkg) > 0){
+  print(paste("Install missing package(s):", new.pkg, sep=' '))
+  install.packages(new.pkg, dependencies = TRUE)
+}else{
+  print("All packages are already installed!")
+}
+
+##~~~
+#4. Load all required packages
+##~~~
+print("Load packages and return status")
+#Here we use the sapply() function to require all the packages
+# To know more about the function type ?sapply() in R console
+sapply(pkg, require, character.only = TRUE)
+
+# Generate BibTex citation file for all loaded R packages
+# used to produce report Notice the syntax used here to
+# call the function
+knitr::write_bib(.packages(), file = "packages.bib")
 ```
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+
+```{r setup, include=FALSE, cache=FALSE, message=FALSE}
+### Load packages Add any packages specific to your code
+library("knitr")
+library("bookdown")
+### Chunk options: see http://yihui.name/knitr/options/ ###
+### Text output
+opts_chunk$set(echo = FALSE, warning = TRUE, message = TRUE, include = TRUE)
+## Code formatting
+opts_chunk$set(tidy = TRUE, tidy.opts = list(blank = FALSE, width.cutoff = 60),
+    highlight = TRUE)
+## Code caching
+opts_chunk$set(cache = 2, cache.path = "cache/")
+## Plot output The first dev is the master for the output
+## document
+opts_chunk$set(fig.path = "Figures_MS/", dev = c("png", "pdf"),
+    dpi = 300)
+## Figure positioning
+opts_chunk$set(fig.pos = "H")
 ```
+
 
 Sven's tips
 Day 1, Day 2 make split clear, make homework or activity clear
@@ -39,6 +89,7 @@ use hyperlinks
 make table of contents float (float=TRUE argument) so can help navigate
 
 # Introduction
+
 Throughout this semester, we have discussed making our science reproducible and accessible. We started by learning the concept of reproducible science and why it is so important. We also learned that there is a reproducibility crisis, what might be causing it, and how to address it. To address writing reproducible code, we learned about R markdown files and how to format them in a clear, reproducible way. We next learned how to make bibliographies, appendices, tables, figures, citations, and references in R markdown and how to use settings to best display them. We learned about creating and using functions and lists in R and writing code in a clear, reproducible, and defensive way. 
 
 Then, we discussed the scientific method and how to mitigate the threats to each step of the scientific process. One of the mitigation strategies is using the TOP (Transparency and Openness Promotion) Guidelines, another is the OSF (Open Science Framework). Other mitigation strategies include the FAIR and CARE principles. FAIR principles focus on making data accessible to everyone, whereas CARE principles apply specifically to data involving Indigenous People and emphasize considerations of who benefits from the data, who can collect the data and the responsibilities and ethics surrounding the data. They are technically in opposition to each other but are equally important to consider when conducting research and before sharing data. Connected to this was the concept of a Creative Common license and which would be best to use for your own research. 
@@ -48,56 +99,59 @@ Finally, we learned about data management, that it is best to create a data mana
 One of the final pieces of making your science reproducible is making sure your data and code are accessible, again and importantly considering the FAIR and CARE principles. During this tutorial, we will introduce Git and Github, which will help make your science more reproducible. Early in this semester, we were given a definition of reproducible science that included having data and code be publicly available.
 
 ## Git and GitHub
+
 Git is a version control system, which keeps track of the changes made to the files stored within it and allows us to return to previous versions. GitHub is the cloud hosting service built on top of Git. It can store data for you remotely, solving the issue of data storage. However, it was not built specifically for researchers, but instead for computer programmers. So at first glance, GitHub can be challenging to understand and use. With some time, the many helpful features of GitHub can become more clear and be used to help us conduct more reproducible research.
 
-One of these features is data storage and access. When you create a project, which GitHub calls a repository, you can store data and code along with a README.md file that can be used to make your file structure even more clear. It can be particularly useful when several collaborators are working on the same project. Github allows files to be shared and edited, and tracks who edited which files and how they edit the files. Researchers unconnected to the project can also suggest changes to files, if the repository is public, which could provide further checks that help make science more reproducible. Github will store versions of your file indefinitely and for free, and will connect to RStudio Projects, which we will discuss today.
+One of these features is data storage and access. When you create a project, which GitHub calls a repository, you can store data and code along with a README.md file that can be used to make your file structure even more clear. It can be particularly useful when several collaborators are working on the same project. Github allows files to be shared and edited, and tracks who edited which files and how they edit the files. Researchers unconnected to the project can also suggest changes to files, if the repository is public, which could provide further checks that help make science more reproducible. Github will store versions of your file indefinitely and for free, and will connect to RStudio Projects, which we will discuss today. We created this tutorial with information from [@]
 
+# Day 1
 
+## Learning Objectives
 
-```{r pressure, echo=FALSE, fig.cap="Invitation for collaboration", out.width = '100%'}
-#when you invite your collaborator, this is how the page will look like 
-
-knitr::include_graphics("Pictures/introrepo.png")
-```
-
-
-
-# Learning Objectives
-* Learn how to create a GitHub account
-* Download and Install Git
-* Useful terms for working with Git and GitHub
-* Create a remote repository on GitHub
-* project in R studio, work with partner to clone
-* Turn on notifications for push changes
+* [Learn how to create a GitHub account](#learn-how-to-create-a-github-account)
+* [Download and Install Git](#download-and-install-git)
+* [Useful terms for working with Git and GitHub](#useful-terms-for-working-with-git-and-github)
+* [Create a remote repository on GitHub](#create-a-remote-repository-on-github)
+* Create a project in R studio and (clone?)
+* [Turn on notifications for push changes](#turn-on-notifications-for-push-changes)
 * Homework assignment: push changes, pull changes, commit changes, how to deal with merging issues
 
-## Learn how to create a GitHub account
+
+
+### Learn how to create a GitHub account
+
 First, we need to create a GitHub account. To create a github account, visit [Github](https://github.com/). Register with your BSU email address and create an account for free. Good news if you already have a GitHub account, just login with your details!
 
-## Download and Install Git
+### Download and Install Git
+
 Download and install Git on your local computer using [this link](https://git-scm.com/install/). Choose your operating system and follow the directions given on the website.
 
-### Set your R Terminal to Git Bash.
+#### Set your R Terminal to Git Bash.
+
 Make sure your settings are up to date by going to Tools –> Global Options –> Terminal –> under the General Tab –> New Terminals Open with: GitBash –> Apply.
 
-## Useful terms for working with Git and GitHub
+### Useful terms for working with Git and GitHub
+
 As we work today and for your future Git adventures, here are a few useful terms and their definitions.
 
 ```{r definitions}
 
 ### Create a data.frame w/ grading scale
-definitions <- data.frame(Term = c('Branch', 'Clone', 'Collaborate', 'Commit', 'Commit ID', 'Commit Message', 'Default Branch', 'Diff', 'Directory',
-    'Force Push'), Definition = c("A branch is a parallel version of a repository. It is contained within the repository, but does not affect the primary or main branch allowing you to work freely without disrupting the live version. When you've made the changes you want to make, you can merge your branch back into the main branch to publish your changes.", "A clone is a copy of a repository that lives on your computer instead of on a website's server somewhere, or the act of making that copy. When you make a clone, you can edit the files in your preferred editor and use Git to keep track of your changes without having to be online. The repository you cloned is still connected to the remote version so that you can push your local changes to the remote to keep them synced when you're online.", "A collaborator is a person with read and write access to a repository who has been invited to contribute by the repository owner.", "A commit, or revision, is an individual change to a file (or set of files). When you make a commit to save your work, Git creates a unique ID (a.k.a. the SHA or hash) that allows you to keep record of the specific changes committed along with who made them and when. Commits usually contain a commit message which is a brief description of what changes were made.", "Also known as SHA. A 40-character checksum hash that identifies the commit.", "Short, descriptive text that accompanies a commit and communicates the change the commit is introducing.", "The base branch for new pull requests and code commits in a repository. Each repository has at least one branch, which Git creates when you initialize the repository. The first branch is usually called main, and is often the default branch.", "A diff is the difference in changes between two commits, or saved changes. The diff will visually describe what was added or removed from a file since its last commit.", "A folder containing one or more files or folders. You can create directories to organize the contents of a repository.", "A Git push that overwrites the remote repository with local changes without regard for conflicts."))
+definitions <- data.frame(Term = c('Branch', 'Clone', 'Collaborate', 'Commit', 'Commit ID', 'Commit Message', 'Default Branch','Diff','Directory','Force Push'), Definition = c("A branch is a parallel version of a repository. It is contained within the repository, but does not affect the primary or main branch allowing you to work freely without disrupting the live version. When you've made the changes you want to make, you can merge your branch back into the main branch to publish your changes.", "A clone is a copy of a repository that lives on your computer instead of on a website's server somewhere, or the act of making that copy. When you make a clone, you can edit the files in your preferred editor and use Git to keep track of your changes without having to be online. The repository you cloned is still connected to the remote version so that you can push your local changes to the remote to keep them synced when you're online.", "A collaborator is a person with read and write access to a repository who has been invited to contribute by the repository owner.", "A commit, or revision, is an individual change to a file (or set of files). When you make a commit to save your work, Git creates a unique ID (a.k.a. the SHA or hash) that allows you to keep record of the specific changes committed along with who made them and when. Commits usually contain a commit message which is a brief description of what changes were made.", "Also known as SHA. A 40-character checksum hash that identifies the commit.", "Short, descriptive text that accompanies a commit and communicates the change the commit is introducing.", "The base branch for new pull requests and code commits in a repository. Each repository has at least one branch, which Git creates when you initialize the repository. The first branch is usually called main, and is often the default branch.", "A diff is the difference in changes between two commits, or saved changes. The diff will visually describe what was added or removed from a file since its last commit.", "A folder containing one or more files or folders. You can create directories to organize the contents of a repository.", "A Git push that overwrites the remote repository with local changes without regard for conflicts."))
 ### Plot table and add caption
 knitr::kable(definitions, caption = "Useful definitions when working with Git and GitHub",
     format = "html") %>%
     kableExtra::kable_styling(c("striped", "scale_down"))
 ```
 
-## Create a remote repository on GitHub
+### Create a remote repository on GitHub
+
 There are three ways to create a new repository on GitHub:
-1. Create a new directory on your local computer using your computer's command line and then push that into GitHub using the terminal (check this!). More detailed instructions are available in (figure out how to cite Gandrud 2020 and put into reference bibliography section)
-2. Create a remote repository on Github and then clone that repository into your local computer which can then be updated and pushed back into Github. Make sure that the name of your repository matches with the one you will be cloning. 
+
+1. Create a new directory on your computer, then turn it into a local repository  using your computer's command line. Create a remote repository on GitHub with the same name as your  and then push that into GitHub using the terminal (check this!). More detailed instructions are available in (@Gandrud_2020).
+
+2. Create a remote repository on Github and then clone that repository into your local computer which can then be updated and pushed back into Github. Make sure that the name of your repository matches with the one you will be cloning.
+
 3. Create a new ‘folder’ or ‘directory’ on your local computer and then push that into github.
 
 To avoid errors and save some time name your repository and the clone repository as “Chapter_12”.
@@ -119,29 +173,42 @@ knitr::include_graphics("Pictures/creatingrepo.png")
 knitr::include_graphics("Pictures/redcircle.png")
 ```
 
+### Create a project in RStudio (and clone - or link)
+
+
+
 ```{r gitversion, echo=FALSE, fig.cap="Create an R Markdown document in RStudio ", out.width = '100%'}
 #Cloning your repository
 
 knitr::include_graphics("Pictures/gitversion.png")
 ```
 
-# Notify your collaborators
+### Turn on notifications for push changes
 
 When you and your collaborators make changes, you can see the changes if you have push notifications turned on. This is good for tracking and knowing what your collaborators are working on. 
 To turn on push notifications: 
 
-* Click on Settings on the upper right while in the repository you just created (or any you need notifications for).
-* Scroll down to the bottom of the list of settings and in the lower left corner, click on Email notifications.
-You should see the Email notifications page. 
-* Make sure to add the email address you would like to receive notifications on, check the box next to Active if not already checked, then press Update settings. 
+1. Click on Settings on the upper right while in the repository you just created (or any you need notifications for). 
 
-
-```{r emailnot, echo=FALSE, fig.cap="Admin email notification", out.width = '100%'}
+```{r settings, echo=FALSE, fig.align = 'center', out.width = '75%'}
 #show how to do push notifications
 knitr::include_graphics("Pictures/settings.jpg")
+```
 
+
+2. Scroll down to the bottom of the list of settings and in the lower left corner, click on Email notifications.
+You should see the Email notifications page. 
+
+
+```{r emailnot, echo=FALSE, fig.align= 'center', out.width = '50%'}
 knitr::include_graphics("Pictures/email_not.jpg")
+```
 
+
+3. Make sure to add the email address you would like to receive notifications on, check the box next to Active if not already checked, then press Update settings. 
+
+
+```{r pushnot, echo=FALSE, fig.align= 'center', out.width = '50%'}
 knitr::include_graphics("Pictures/push_not.jpg")
 ```
 
@@ -150,9 +217,13 @@ knitr::include_graphics("Pictures/push_not.jpg")
 Unfortunately only the admin or owner of the repository can get notifications when changes are made. So far we have not found a way to make collaborators receive these notifications. We tried using the “Watch” button in the upper right for the collaborator to receive this messages, but that did not seem to work. This remains to be explored as it can be a useful tool for remote communication. 
 
 
+### When commiting changes:
 
-
-
+* Do not commit at the same time, Git does not like it. It will break
+* Make sure the box for the doc/file you are working on is checked before (blue tick) before you push.
+* Write something on the commit box so that your partner can track changes. 
+* To avoid git errors, communicate with your partner when pushing and pulling. 
+* It is good to keep track and not get git confused.  
 
 
 ```{r redgreen, echo=FALSE, fig.cap="Interface when pushing and committing changes", out.width = '100%'}
@@ -161,22 +232,19 @@ Unfortunately only the admin or owner of the repository can get notifications wh
 knitr::include_graphics("Pictures/red_green.png")
 ```
 
-# When commiting changes:
 
-* Do not commit at the same time, Git does not like it. It will break
-* Make sure the box for the doc/file you are working on is checked before (blue tick) before you push.
-* Write something on the commit box so that your partner can track changes. 
-* To avoid git errors, communicate with your partner when pushing and pulling. 
-* It is good to keep track and not get git confused.  
 
 # Day 2
 
-# Learning Objectives
+## Learning Objectives
 
-* Activity to practice push/pull/commit changes with partner’s repository
-* How to upload/download data to and from github repository - import data into R from github
+* Activity for Day 2 of the Tutorial
+* Import data into R from github repository
+* Checking out public repositories
+* Downloading data, uploading data, importing into RStudio project
 
-# Activity for Day 2 of the Tutorial
+### Activity for Day 2 of the Tutorial
+
 By now, you should have created a repository of your own and linked it with a matching project in RStudio. The next piece of working in github is to practice working with a collaborator.
 
 In pairs, you will:
@@ -199,6 +267,12 @@ knitr::include_graphics("Pictures/manage_access.jpg")
 
 4. Click Add to repository, your partner should get a code in an email to access your repository.
 
+```{r introrepo, echo=FALSE, fig.cap="Invitation for collaboration", out.width = '100%'}
+#when you invite your collaborator, this is how the page will look like 
+
+knitr::include_graphics("Pictures/introrepo.png")
+```
+
 5. Once the collaborator partner finds the admin’s repository, click on the green code button in the upper right hand corner.
 
 ```{r activity3, echo=FALSE, out.width = '100%'}
@@ -217,11 +291,13 @@ knitr::include_graphics("Pictures/copy_link.jpg")
 8. Do a repeat of this exercise until you have 3 sentences each (or 1 each for time).
 * Have conversation with each other (Fiona and Tshia will push and pull and demonstrate on the projector).
 
-# Import data into R from github repository
+### Import data into R from github repository
+
 As you read more papers, interact with collaborators, and become a scientist doing extremely reproducible science, you will likely need to bring data from a public GitHub repository into your own computer and into R. 
 
 
-## Public Repositories
+### Checking out public repositories
+
 * One example of a public repository is Sven’s repository for this class [Reproducible 603](https://github.com/svenbuerki/EEB603_Reproducible_Science). Following the link, you can see his repository, with all the folders and files inside displayed in a list. If you scroll to the bottom, you can see the README with information about this repository/class.
 
 * Another example of a public repository is one that was made as part of a paper submission. Fiona read a cool microbial ecology paper that tracked the ecological and evolutionary responses of Curtobacterium over an elevation gradient in Southern California. In the paper, there is a section that says Data Availability. Following the [Link](https://github.com/alex-b-chase/curtoEvol) to their github, we can see a similar set of folders and files, as well as a README.
@@ -232,7 +308,8 @@ knitr::include_graphics("Pictures/Chase_et_al_2021_data_availability.jpg")
 
 * For either repository, find a data file. Usually, you will have the specific data in mind and may have background for the name you are looking for. However, sometimes repositories can be unclear. Use what we have learned in class to identify data, whether a .csv file, a .txt file, or a .xlsx file. 
 
-## Downloading data, uploading data, importing into RStudio project
+### Downloading data, uploading data, importing into RStudio project
+
 Download the data file by clicking on the Download raw file button. It will now be on your computer. Practice uploading data to your own GitHub repository by returning to your repository, clicking the add file button next to the green code button, then Upload files in the dropdown. You can drag files into the box or choose your files. Make sure to commit your changes in the section underneath the box. 
 
 To import data into RStudio, go to your repository in GitHub. Find the data file we just uploaded and go to the file by clicking on it in the list of files in your repository. Click on the Raw button in the upper left. It should bring you to a page with just the file contents and the url at the top is what you need to copy. Moving back to RStudio, in a new R script, run these lines of code:
@@ -247,7 +324,7 @@ To import data into RStudio, go to your repository in GitHub. Find the data file
 
 
 
-## Relevant resources
+# Relevant resources
 
 
 [2nd edition reproducible Research with R and Rstudio](https://englianhu.wordpress.com/wp-content/uploads/2016/01/reproducible-research-with-r-and-studio-2nd-edition.pdf)
@@ -257,6 +334,40 @@ To import data into RStudio, go to your repository in GitHub. Find the data file
 [Github for dummies](https://www.youtube.com/watch?v=mJ-qvsxPHpY&t=859s)
 
 [Github control version](https://www.youtube.com/watch?v=HVsySz-h9r4&t=9s)
+
+
+Many scientists have struggled to reproduce their own lab's work as well as work from other labs [@Baker_2016]. However, the survey in @Baker_2016 points to several factors that may contribute to this phenomenon and what may be changed to solve it.
+
+# References
+
+<div id="refs"></div>
+
+# (APPENDIX) Appendices {-}
+
+# Appendix 1
+
+Citations of all R packages used to generate this report.
+```{r generateBibliography, results="asis", echo=FALSE, warning=FALSE, message=FALSE}
+
+### Load R package
+library("knitcitations")
+### Process and print citations in packages.bib Clear all
+### bibliography that could be in the cash
+cleanbib()
+# Set pandoc as the default output option for bib
+options(citation_format = "pandoc")
+# Read and print bib from file
+read.bibtex(file = "packages.bib")
+```
+
+# Appendix 2
+
+Version information about R, the operating system (OS) and attached or R loaded packages. This appendix was generated using `sessionInfo()`.
+```{r sessionInfo, eval=TRUE, echo=FALSE, warning=FALSE, message=FALSE}
+
+# Load and provide all packages and versions
+sessionInfo()
+```
 
 
 
