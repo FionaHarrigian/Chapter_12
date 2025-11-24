@@ -132,7 +132,8 @@ One of these features is data storage and access. When you create a project, whi
 * [Creating a remote repository in GitHub](#creating-a-remote-repository-in-github)
 * [Creating a local repository in RStudio](#creating-a-local-repository-in-rstudio)
 * [Turn on notifications for push changes](#turn-on-notifications-for-push-changes)
-* Homework assignment: push changes, pull changes, commit changes, how to deal with merging issues
+* [Activity for Day 1 of the Tutorial](#activity-for-day-1-of-the-tutorial)
+* [Committing your changes cautiously](#committing-your-changes-cautiously)
 
 
 ### Set your R Terminal to Git Bash
@@ -144,9 +145,7 @@ Make sure your settings are up to date by going to Tools –> Global Options –
 As we work today and for your future Git adventures, here are a few useful terms and their definitions.
 
 ```{r definitions}
-
-### Create a data.frame w/ grading scale
-definitions <- data.frame(Term = c('Branch', 'Clone', 'Collaborate', 'Commit', 'Commit ID', 'Commit Message', 'Default Branch','Diff','Directory','Force Push'), Definition = c("A branch is a parallel version of a repository. It is contained within the repository, but does not affect the primary or main branch allowing you to work freely without disrupting the live version. When you've made the changes you want to make, you can merge your branch back into the main branch to publish your changes.", "A clone is a copy of a repository that lives on your computer instead of on a website's server somewhere, or the act of making that copy. When you make a clone, you can edit the files in your preferred editor and use Git to keep track of your changes without having to be online. The repository you cloned is still connected to the remote version so that you can push your local changes to the remote to keep them synced when you're online.", "A collaborator is a person with read and write access to a repository who has been invited to contribute by the repository owner.", "A commit, or revision, is an individual change to a file (or set of files). When you make a commit to save your work, Git creates a unique ID (a.k.a. the SHA or hash) that allows you to keep record of the specific changes committed along with who made them and when. Commits usually contain a commit message which is a brief description of what changes were made.", "Also known as SHA. A 40-character checksum hash that identifies the commit.", "Short, descriptive text that accompanies a commit and communicates the change the commit is introducing.", "The base branch for new pull requests and code commits in a repository. Each repository has at least one branch, which Git creates when you initialize the repository. The first branch is usually called main, and is often the default branch.", "A diff is the difference in changes between two commits, or saved changes. The diff will visually describe what was added or removed from a file since its last commit.", "A folder containing one or more files or folders. You can create directories to organize the contents of a repository.", "A Git push that overwrites the remote repository with local changes without regard for conflicts."))
+definitions <- data.frame(Term = c('Branch', 'Clone', 'Collaborate', 'Commit', 'Commit ID', 'Commit Message', 'Default Branch','Diff','Directory','Force Push','Pull','Push','Repository'), Definition = c("A branch is a parallel version of a repository. It is contained within the repository, but does not affect the primary or main branch allowing you to work freely without disrupting the live version. When you've made the changes you want to make, you can merge your branch back into the main branch to publish your changes.", "A clone is a copy of a repository that lives on your computer instead of on a website's server somewhere, or the act of making that copy. When you make a clone, you can edit the files in your preferred editor and use Git to keep track of your changes without having to be online. The repository you cloned is still connected to the remote version so that you can push your local changes to the remote to keep them synced when you're online.", "A collaborator is a person with read and write access to a repository who has been invited to contribute by the repository owner.", "A commit, or revision, is an individual change to a file (or set of files). When you make a commit to save your work, Git creates a unique ID (a.k.a. the SHA or hash) that allows you to keep record of the specific changes committed along with who made them and when. Commits usually contain a commit message which is a brief description of what changes were made.", "Also known as SHA. A 40-character checksum hash that identifies the commit.", "Short, descriptive text that accompanies a commit and communicates the change the commit is introducing.", "The base branch for new pull requests and code commits in a repository. Each repository has at least one branch, which Git creates when you initialize the repository. The first branch is usually called main, and is often the default branch.", "A diff is the difference in changes between two commits, or saved changes. The diff will visually describe what was added or removed from a file since its last commit.", "A folder containing one or more files or folders. You can create directories to organize the contents of a repository.", "A Git push that overwrites the remote repository with local changes without regard for conflicts."))
 ### Plot table and add caption
 knitr::kable(definitions, caption = "Useful definitions when working with Git and GitHub",
     format = "html") %>%
@@ -249,19 +248,7 @@ knitr::include_graphics("Pictures/push_not.jpg")
 
 Unfortunately only the admin or owner of the repository can get notifications when changes are made. So far we have not found a way to make collaborators receive these notifications. We tried using the “Watch” button in the upper right for the collaborator to receive this messages, but that did not seem to work. This remains to be explored as it can be a useful tool for remote communication. 
 
-
-
-# Day 2
-
-## Learning Objectives
-
-* [Activity for Day 2 of the Tutorial](#activity-for-day-2-of-the-tutorial)
-* [Committing your changes cautiously](#committing-your-changes-cautiously)
-* [Checking out public repositories](#checking-out-public-repositories)
-* [Import data into R from a GitHub repository](#import-data-into-r-from-a-github-repository)
-* [Downloading data, uploading data, importing into RStudio project](#downloading-data,-uploading-data,-importing-into-rstudio-project)
-
-### Activity for Day 2 of the Tutorial
+### Activity for Day 1 of the Tutorial
 
 By now, you should have created a repository of your own and linked it with a matching project in RStudio. The next piece of working in github is to practice working with a collaborator.
 
@@ -329,6 +316,18 @@ knitr::include_graphics("Pictures/copy_link.jpg")
 knitr::include_graphics("Pictures/red_green.png")
 ```
 
+
+
+# Day 2
+
+## Learning Objectives
+
+* [Activity for Day 2 of the Tutorial](#activity-for-day-2-of-the-tutorial)
+* [Checking out public repositories](#checking-out-public-repositories)
+* [Import data into R from a GitHub repository](#import-data-into-r-from-a-github-repository)
+* [Downloading data, uploading data, importing into RStudio project](#downloading-data,-uploading-data,-importing-into-rstudio-project)
+
+### Activity for Day 2 of the Tutorial
 
 ### Checking out public repositories
 
