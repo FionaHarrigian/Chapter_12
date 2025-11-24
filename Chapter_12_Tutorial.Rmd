@@ -219,6 +219,14 @@ knitr::include_graphics("Pictures/creatingrepo.png")
 
 In RStudio, just like creating a new project at the beginning of this class (or anytime you want to start a new project), you can make a new project that can be linked to a remote repository in GitHub. 
 
+1. Go back to your GitHub, find the repository you just made and go to the green Code button in the upper right hand corner. Click this and a tab will appear that says Clone. Under this tab, there is a HTTPS section. Make sure you are in this section, then press the icon of one square on top of another inside of the red circle below in Figure \@ref(fig:redcircle).
+
+```{r redcircle, echo=FALSE, fig.align= 'center', fig.cap="Cloning Repository from GitHub into RStudio", out.width = '75%'}
+#Cloning your repository
+
+knitr::include_graphics("Pictures/redcircle.png")
+```
+
 1. Create a new project on RStudio with Git version control by first choosing "Version Control" in the new project wizard.
 
 ```{r createRproject, echo=FALSE, fig.align= 'center', out.width = '50%'}
@@ -231,15 +239,8 @@ knitr::include_graphics("Pictures/new_project_git.jpg")
 knitr::include_graphics("Pictures/GitRproject.jpg")
 ```
 
-3. Go back to your GitHub, find the repository you just made and go to the green Code button in the upper right hand corner. Click this and a tab will appear that says Clone. Under this tab, there is a HTTPS section. Make sure you are in this section, then press the icon of one square on top of another inside of the red circle below in Figure \@ref(fig:redcircle).
 
-```{r redcircle, echo=FALSE, fig.align= 'center', fig.cap="Cloning Repository from GitHub into RStudio", out.width = '75%'}
-#Cloning your repository
-
-knitr::include_graphics("Pictures/redcircle.png")
-```
-
-4. Paste this url that you just copied into the box that says Repository URL inside the Clone Git Repository box. For the Project directory name, use the same name as your GitHub repository. Create the new RStudio Git version control inside a subdirectory, using your Desktop, Documents folder, or anywhere you normally create new RStudio directories.
+3. Paste this url that you just copied into the box that says Repository URL inside the Clone Git Repository box. For the Project directory name, use the same name as your GitHub repository. Create the new RStudio Git version control inside a subdirectory, using your Desktop, Documents folder, or anywhere you normally create new RStudio directories.
 
 ```{r gitversion, echo=FALSE, fig.align= 'center', out.width = '50%'}
 #Cloning your repository
