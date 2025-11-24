@@ -75,7 +75,7 @@ opts_chunk$set(fig.pos = "H")
 
 
 Sven's tips
-Day 1, Day 2 make split clear, make homework or activity clear
+Day 1, Day 2 make split clear, make homework or activity clear - done
 headers are learning outcomes, hyper(?)link learning outcomes to each section
 add terms to learning outcomes, make clear what each piece will be for later
 some more context, best way to communicate
@@ -296,20 +296,20 @@ knitr::include_graphics("Pictures/green_code_button.jpg")
 ```
 
 6. Copy the HTTPS URL with the box button to the right of the url.
-Follow the directions to clone your repository in RStudio as presented in section \@ref(2.2).
+Follow the directions to clone your repository in RStudio as presented in [Creating a local repository in RStudio](#creating-a-local-repository-in-rstudio).
 
 ```{r activity6, echo=FALSE, out.width = '100%'}
 knitr::include_graphics("Pictures/copy_link.jpg")
 ```
 
-7. Once each of you have the repository open in RStudio, one will go first, writing a sentence in the README.md, saving the your local file, committing the change (Figure \@ref(fig:redgreen))), pushing the change to the remote GitHub repository file, then the other partner pulls that change with the down pull arrow and adds their own sentence. 
+7. Once each of you have the repository open in RStudio, one will go first, writing a sentence in the README.md, saving the your local file, committing the change Figure \@ref(fig:redgreen), pushing the change to the remote GitHub repository file, then the other partner pulls that change with the down pull arrow and adds their own sentence. 
 
 8. Do a repeat of this exercise until you have 3 sentences each (or 1 each for time).
 * Have conversation with each other (Fiona and Tshia will push and pull and demonstrate on the projector).
 
 ### Committing your changes cautiously
 
-* Do not commit at the same time, Git does not like it. It will break
+* Do not commit at the same time as your collaborator, Git does not like it. It will break show an error Figure \@ref(fig:redgreen)
 * Make sure the box for the doc/file you are working on is checked before (blue tick) before you push.
 * Write something on the commit box so that your partner can track changes. 
 * To avoid git errors, communicate with your partner when pushing and pulling. 
