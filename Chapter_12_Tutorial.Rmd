@@ -111,10 +111,11 @@ One of these features is data storage and access. When you create a project, whi
 * [Learn how to create a GitHub account](#learn-how-to-create-a-github-account)
 * [Download and Install Git](#download-and-install-git)
 * [Useful terms for working with Git and GitHub](#useful-terms-for-working-with-git-and-github)
-* [Create a remote repository on GitHub](#create-a-remote-repository-on-github)
-* Create a project in R studio and (clone?)
+* [Creating a remote repository in GitHub](#creating-a-remote-repository-in-github)
+* [Creating a local repository in RStudio](#creating-a-local-repository-in-rstudio)
 * [Turn on notifications for push changes](#turn-on-notifications-for-push-changes)
-* Homework assignment: push changes, pull changes, commit changes, how to deal with merging issues
+* 
+Homework assignment: push changes, pull changes, commit changes, how to deal with merging issues
 
 
 
@@ -193,34 +194,24 @@ knitr::include_graphics("Pictures/new_project_git.jpg")
 knitr::include_graphics("Pictures/GitRproject.jpg")
 ```
 
-and then create a remote repository on GitHub clone that repository into your local computer which can then be updated and pushed back into Github. Make sure that the name of your repository matches with the one you will be cloning.
+3. Go back to your GitHub, find the repository you just made and go to the green Code button in the upper right hand corner. Click this and a tab will appear that says Clone. Under this tab, there is a HTTPS section. Make sure you are in this section, then press the icon of one square on top of another inside of the red circle below in Figure \@ref(fig:redcircle).
 
-
-To avoid errors and save some time name your repository and the clone repository as “Chapter_12”.
-
-For this tutorial, we will be using the second method.
-
-
-
-```{r redcircle, echo=FALSE, fig.cap="Cloning Repository", out.width = '100%'}
+```{r redcircle, echo=FALSE, fig.align= 'center', fig.cap="Cloning Repository from GitHub into RStudio", out.width = '75%'}
 #Cloning your repository
 
 knitr::include_graphics("Pictures/redcircle.png")
 ```
 
-### Create a project in RStudio (and clone - or link)
+4. Paste this url that you just copied into the box that says Repository URL inside the Clone Git Repository box. For the Project directory name, use the same name as your GitHub repository. Create the new RStudio Git version control inside a subdirectory, using your Desktop, Documents folder, or anywhere you normally create new RStudio directories.
 
-
-
-```{r gitversion, echo=FALSE, fig.cap="Create an R Markdown document in RStudio ", out.width = '100%'}
+```{r gitversion, echo=FALSE, fig.align= 'center', out.width = '50%'}
 #Cloning your repository
-
 knitr::include_graphics("Pictures/gitversion.png")
 ```
 
 ### Turn on notifications for push changes
 
-When you and your collaborators make changes, you can see the changes if you have push notifications turned on. This is good for tracking and knowing what your collaborators are working on. 
+If you are the owner of the repository, when you and your collaborators make changes, you can see the changes if you have push notifications turned on. This is good for tracking and knowing what your collaborators are working on. 
 To turn on push notifications: 
 
 1. Click on Settings on the upper right while in the repository you just created (or any you need notifications for). 
@@ -248,11 +239,75 @@ knitr::include_graphics("Pictures/push_not.jpg")
 ```
 
 
-
 Unfortunately only the admin or owner of the repository can get notifications when changes are made. So far we have not found a way to make collaborators receive these notifications. We tried using the “Watch” button in the upper right for the collaborator to receive this messages, but that did not seem to work. This remains to be explored as it can be a useful tool for remote communication. 
 
 
-### When commiting changes:
+
+# Day 2
+
+## Learning Objectives
+
+* [Activity for Day 2 of the Tutorial](#activity-for-day-2-of-the-tutorial)
+* [Committing your changes cautiously](#committing-your-changes-cautiously)
+* [Checking out public repositories](#checking-out-public-repositories)
+* [Import data into R from a GitHub repository](#import-data-into-r-from-a-github-repository)
+* [Downloading data, uploading data, importing into RStudio project](#downloading-data,-uploading-data,-importing-into-rstudio-project)
+
+### Activity for Day 2 of the Tutorial
+
+By now, you should have created a repository of your own and linked it with a matching project in RStudio. The next piece of working in github is to practice working with a collaborator.
+
+In pairs, you will:
+
+1. Choose one of the pair to be the admin and one to be the collaborator. 
+
+2. The admin will go to the settings of their repository, then click on Collaborators in the upper left area of the settings. You’ll be prompted to login, once you do, you’ll get to the collaborators screen. 
+
+```{r activity1, echo=FALSE, fig.align= 'center', out.width = '50%'}
+knitr::include_graphics("Pictures/collab_add.jpg")
+```
+
+```{r activity2, echo=FALSE, fig.align= 'center', out.width = '25%'}
+knitr::include_graphics("Pictures/login_screen.jpg")
+```
+
+```{r activity3, echo=FALSE, fig.align= 'center', out.width= '50%'}
+knitr::include_graphics("Pictures/collab_admin.jpg")
+```
+
+
+3. Add your partner by clicking the add people button and searching for your partner’s GitHub account name (check with them, sometimes it may be different from their name, include numbers, etc.)
+
+```{r activity4, echo=FALSE, fig.align= 'center', out.width = '50%'}
+knitr::include_graphics("Pictures/manage_access.jpg")
+```
+
+4. Click Add to repository, your partner should get a code in an email to access your repository.
+
+```{r introrepo, echo=FALSE, fig.align= 'center', out.width = '50%'}
+#when you invite your collaborator, this is how the page will look like 
+knitr::include_graphics("Pictures/introrepo.png")
+```
+
+5. Once the collaborator partner finds the admin’s repository, click on the green code button in the upper right hand corner.
+
+```{r activity5, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("Pictures/green_code_button.jpg")
+```
+
+6. Copy the HTTPS URL with the box button to the right of the url.
+Follow the directions to clone your repository in RStudio as presented in section \@ref(2.2).
+
+```{r activity6, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("Pictures/copy_link.jpg")
+```
+
+7. Once each of you have the repository open in RStudio, one will go first, writing a sentence in the README.md, saving the your local file, committing the change (Figure \@ref(fig:redgreen))), pushing the change to the remote GitHub repository file, then the other partner pulls that change with the down pull arrow and adds their own sentence. 
+
+8. Do a repeat of this exercise until you have 3 sentences each (or 1 each for time).
+* Have conversation with each other (Fiona and Tshia will push and pull and demonstrate on the projector).
+
+### Committing your changes cautiously
 
 * Do not commit at the same time, Git does not like it. It will break
 * Make sure the box for the doc/file you are working on is checked before (blue tick) before you push.
@@ -268,70 +323,9 @@ knitr::include_graphics("Pictures/red_green.png")
 ```
 
 
-
-# Day 2
-
-## Learning Objectives
-
-* Activity for Day 2 of the Tutorial
-* Import data into R from github repository
-* Checking out public repositories
-* Downloading data, uploading data, importing into RStudio project
-
-### Activity for Day 2 of the Tutorial
-
-By now, you should have created a repository of your own and linked it with a matching project in RStudio. The next piece of working in github is to practice working with a collaborator.
-
-In pairs, you will:
-
-1. Choose one of the pair to be the admin and one to be the collaborator. 
-
-2. The admin will go to the settings of their repository, then click on Collaborators in the upper left area of the settings. You’ll be prompted to login, once you do, you’ll get to the collaborators screen. 
-
-```{r activity1, echo=FALSE, out.width = '100%'}
-knitr::include_graphics("Pictures/collab_add.jpg")
-knitr::include_graphics("Pictures/login_screen.jpg")
-knitr::include_graphics("Pictures/collab_admin.jpg")
-```
-
-3. Add your partner by clicking the add people button and searching for your partner’s GitHub account name (check with them, sometimes it may be different from their name, include numbers, etc.)
-
-```{r activity2, echo=FALSE, out.width = '100%'}
-knitr::include_graphics("Pictures/manage_access.jpg")
-```
-
-4. Click Add to repository, your partner should get a code in an email to access your repository.
-
-```{r introrepo, echo=FALSE, fig.cap="Invitation for collaboration", out.width = '100%'}
-#when you invite your collaborator, this is how the page will look like 
-
-knitr::include_graphics("Pictures/introrepo.png")
-```
-
-5. Once the collaborator partner finds the admin’s repository, click on the green code button in the upper right hand corner.
-
-```{r activity3, echo=FALSE, out.width = '100%'}
-knitr::include_graphics("Pictures/green_code_button.jpg")
-```
-
-6. Copy the HTTPS URL with the box button to the right of the url.
-Follow the directions to clone your repository in RStudio as presented in section \@ref(2.2).
-
-```{r activity4, echo=FALSE, out.width = '100%'}
-knitr::include_graphics("Pictures/copy_link.jpg")
-```
-
-7. Once each of you have the repository open in RStudio, one will go first, writing a sentence in the README.md, saving the your local file, committing the change (Figure \@ref(fig:redgreen))), pushing the change to the remote GitHub repository file, then the other partner pulls that change with the down pull arrow and adds their own sentence. 
-
-8. Do a repeat of this exercise until you have 3 sentences each (or 1 each for time).
-* Have conversation with each other (Fiona and Tshia will push and pull and demonstrate on the projector).
-
-### Import data into R from github repository
+### Checking out public repositories
 
 As you read more papers, interact with collaborators, and become a scientist doing extremely reproducible science, you will likely need to bring data from a public GitHub repository into your own computer and into R. 
-
-
-### Checking out public repositories
 
 * One example of a public repository is Sven’s repository for this class [Reproducible 603](https://github.com/svenbuerki/EEB603_Reproducible_Science). Following the link, you can see his repository, with all the folders and files inside displayed in a list. If you scroll to the bottom, you can see the README with information about this repository/class.
 
@@ -340,6 +334,8 @@ As you read more papers, interact with collaborators, and become a scientist doi
 ```{r Chasedata, echo=FALSE, out.width = '100%'}
 knitr::include_graphics("Pictures/Chase_et_al_2021_data_availability.jpg")
 ```
+
+### Import data into R from a GitHub repository
 
 * For either repository, find a data file. Usually, you will have the specific data in mind and may have background for the name you are looking for. However, sometimes repositories can be unclear. Use what we have learned in class to identify data, whether a .csv file, a .txt file, or a .xlsx file. 
 
