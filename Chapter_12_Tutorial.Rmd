@@ -144,27 +144,62 @@ knitr::kable(definitions, caption = "Useful definitions when working with Git an
     kableExtra::kable_styling(c("striped", "scale_down"))
 ```
 
-### Create a remote repository on GitHub
+### Creating a remote repository in GitHub
 
-There are three ways to create a new repository on GitHub:
+Now that you have created a GitHub account, it is time to make your first repository! To do so, 
 
-1. Create a new directory on your computer, then turn it into a local repository  using your computer's command line. Create a remote repository on GitHub with the same name as your  and then push that into GitHub using the terminal (check this!). More detailed instructions are available in (@Gandrud_2020).
+1. Click the green and white image in the upper right hand corner of GitHub and look for the Repositories button.
 
-2. Create a remote repository on Github and then clone that repository into your local computer which can then be updated and pushed back into Github. Make sure that the name of your repository matches with the one you will be cloning.
+```{r findrepo_github, echo=FALSE, fig.align='center', out.width = '50%'}
+#Creating a remote repository
+knitr::include_graphics("Pictures/findrepo_github.jpg")
+```
 
-3. Create a new ‘folder’ or ‘directory’ on your local computer and then push that into github.
+2. Click the green "New" button in the upper right hand corner of the Repositories tab.
+
+```{r new_repo, echo=FALSE, fig.align='center', out.width = '75%'}
+#Creating a remote repository
+knitr::include_graphics("Pictures/new_repo.jpg")
+```
+
+3. Fill out the new Repository, your username should be in the owner section. Give the repository a name that is easy for you to remember, cannot match the name of another repository in your account. GitHub will recommend fun and interesting names, which would be unique but may be hard to remember and associate with your work, so be careful what you choose. 
+
+For the Configuration options:
+
+1. Create a public repository.
+2. Turn on Add README so that you'll have a readme file in your repository.
+3. Turn on Add .gitignore file and choose R as file template. 
+4. Click Create Repository.
+
+```{r creatingrepo, echo=FALSE, fig.align= 'center', out.width = '50%'}
+#Creating a remote repository
+knitr::include_graphics("Pictures/creatingrepo.png")
+```
+
+
+### Creating a local repository in RStudio
+
+In RStudio, just like creating a new project at the beginning of this class (or anytime you want to start a new project), you can make a new project that can be linked to a remote repository in GitHub. 
+
+1. Create a new project on RStudio with Git version control by first choosing "Version Control" in the new project wizard.
+
+```{r createRproject, echo=FALSE, fig.align= 'center', out.width = '50%'}
+knitr::include_graphics("Pictures/new_project_git.jpg")
+```
+
+2. Next, select the Git button to clone a project from a Git repository.
+
+```{r GitRproject, echo=FALSE, fig.align= 'center', out.width = '50%'}
+knitr::include_graphics("Pictures/GitRproject.jpg")
+```
+
+and then create a remote repository on GitHub clone that repository into your local computer which can then be updated and pushed back into Github. Make sure that the name of your repository matches with the one you will be cloning.
+
 
 To avoid errors and save some time name your repository and the clone repository as “Chapter_12”.
 
 For this tutorial, we will be using the second method.
 
-
-
-```{r creatingrepo, echo=FALSE, fig.cap="Creating a remote repository", out.width = '100%'}
-#Creating a remote repository
-
-knitr::include_graphics("Pictures/creatingrepo.png")
-```
 
 
 ```{r redcircle, echo=FALSE, fig.cap="Cloning Repository", out.width = '100%'}
