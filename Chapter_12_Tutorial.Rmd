@@ -227,20 +227,20 @@ In RStudio, just like creating a new project at the beginning of this class (or 
 knitr::include_graphics("Pictures/redcircle.png")
 ```
 
-1. Create a new project on RStudio with Git version control by first choosing "Version Control" in the new project wizard.
+2. Create a new project on RStudio with Git version control by first choosing "Version Control" in the new project wizard.
 
 ```{r createRproject, echo=FALSE, fig.align= 'center', out.width = '50%'}
 knitr::include_graphics("Pictures/new_project_git.jpg")
 ```
 
-2. Next, select the Git button to clone a project from a Git repository.
+3. Next, select the Git button to clone a project from a Git repository.
 
 ```{r GitRproject, echo=FALSE, fig.align= 'center', out.width = '50%'}
 knitr::include_graphics("Pictures/GitRproject.jpg")
 ```
 
 
-3. Paste this url that you just copied into the box that says Repository URL inside the Clone Git Repository box. For the Project directory name, use the same name as your GitHub repository. Create the new RStudio Git version control inside a subdirectory, using your Desktop, Documents folder, or anywhere you normally create new RStudio directories.
+4. Paste this url that you just copied into the box that says Repository URL inside the Clone Git Repository box. For the Project directory name, use the same name as your GitHub repository. Create the new RStudio Git version control inside a subdirectory, using your Desktop, Documents folder, or anywhere you normally create new RStudio directories.
 
 ```{r gitversion, echo=FALSE, fig.align= 'center', out.width = '50%'}
 #Cloning your repository
@@ -324,7 +324,7 @@ knitr::include_graphics("Pictures/green_code_button.jpg")
 6. Copy the HTTPS URL with the box button to the right of the url.
 Follow the directions to clone your repository in RStudio as presented in [Creating a local repository in RStudio](#creating-a-local-repository-in-rstudio).
 
-```{r activity6, echo=FALSE, out.width = '100%'}
+```{r activity6, echo=FALSE, fig.align = 'center', out.width = '50%'}
 knitr::include_graphics("Pictures/copy_link.jpg")
 ```
 
@@ -342,7 +342,7 @@ knitr::include_graphics("Pictures/copy_link.jpg")
 * It is good to keep track and not get git confused.  
 
 
-```{r redgreen, echo=FALSE, fig.cap="Interface when pushing and committing changes", out.width = '100%'}
+```{r redgreen, echo=FALSE, fig.align= 'center', fig.cap="Interface when pushing and committing changes", out.width = '75%'}
 #what does red and green colors mean when you are communicating with your collaborator
 knitr::include_graphics("Pictures/red_green.png")
 ```
