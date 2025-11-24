@@ -9,6 +9,10 @@ output:
     toc_collapsed: true
     toc_depth: 3
     number_sections: true
+link-citations: yes
+fontsize: 12pt
+bibliography: Bibliography_Ch12_Tutorial.bib 
+csl: AmJBot.csl
 ---
 
 ```{r packages, echo=FALSE, warning=FALSE, include=FALSE}
@@ -74,23 +78,23 @@ opts_chunk$set(fig.pos = "H")
 ```
 
 
-Sven's tips
-Day 1, Day 2 make split clear, - done
-make homework or activity clear - done
-headers are learning outcomes, - done
-hyper(?)link learning outcomes to each section
-add terms to learning outcomes, 
-make clear what each piece will be for later
-some more context, 
-best way to communicate
-call attention to pieces with bolding
-images all squished, give space and use numbers, plus more text?
-only include figures if cross referenced in text
-make sure good enough for other labs, people outside of class too
-email Monday/Tuesday of Thanksgiving week
-make resources more clear than in end section
-use hyperlinks
-make table of contents float (float=TRUE argument) so can help navigate
+# Sven's tips
+
+* Day 1, Day 2 make split clear, - done
+* make homework or activity clear - done
+* headers are learning outcomes, - done
+* hyper(?)link learning outcomes to each section - done
+* add terms to learning outcomes, - done?
+* make clear what each piece will be for later - done?
+* some more context, best way to communicate - check at end
+* call attention to pieces with bolding - done
+* images all squished, give space and use numbers, plus more text? - done
+* only include figures if cross referenced in text
+* make sure good enough for other labs, people outside of class too
+* email Monday/Tuesday of Thanksgiving week
+* make resources more clear than in end section
+* use hyperlinks - done
+* make table of contents float (float=TRUE argument) so can help navigate - done
 
 # Pre-Tutorial Homework
 
@@ -109,19 +113,19 @@ Download and install Git on your local computer using [this link](https://git-sc
 
 # Introduction
 
-Throughout this semester, we have discussed making our science reproducible and accessible. We started by learning the concept of reproducible science and why it is so important. We also learned that there is a reproducibility crisis, what might be causing it, and how to address it. To address writing reproducible code, we learned about R markdown files and how to format them in a clear, reproducible way. We next learned how to make bibliographies, appendices, tables, figures, citations, and references in R markdown and how to use settings to best display them. We learned about creating and using functions and lists in R and writing code in a clear, reproducible, and defensive way. 
+Throughout this semester, we have discussed making our science **reproducible** and **accessible**. We started by learning the concept of **reproducible science** and why it is so important. We also learned that there is a **reproducibility crisis**, what might be causing it, and how to address it. To address writing reproducible code, we learned about R markdown files and how to format them in a clear, reproducible way. We next learned how to make bibliographies, appendices, tables, figures, citations, and references in R markdown and how to use settings to best display them. We learned about creating and using functions and lists in R and writing code in a clear, reproducible, and defensive way. 
 
-Then, we discussed the scientific method and how to mitigate the threats to each step of the scientific process. One of the mitigation strategies is using the TOP (Transparency and Openness Promotion) Guidelines, another is the OSF (Open Science Framework). Other mitigation strategies include the FAIR and CARE principles. FAIR principles focus on making data accessible to everyone, whereas CARE principles apply specifically to data involving Indigenous People and emphasize considerations of who benefits from the data, who can collect the data and the responsibilities and ethics surrounding the data. They are technically in opposition to each other but are equally important to consider when conducting research and before sharing data. Connected to this was the concept of a Creative Common license and which would be best to use for your own research. 
+Then, we discussed the scientific method and how to mitigate the threats to each step of the scientific process. One of the mitigation strategies is using the **TOP** (Transparency and Openness Promotion) Guidelines, another is the **OSF** (Open Science Framework). Other mitigation strategies include the **FAIR** and **CARE** principles. FAIR principles focus on making data accessible to everyone, whereas CARE principles apply specifically to data involving Indigenous People and emphasize considerations of who benefits from the data, who can collect the data and the responsibilities and ethics surrounding the data. They are technically in opposition to each other but are equally important to consider when conducting research and before sharing data. Connected to this was the concept of a **Creative Common license** and which would be best to use for your own research. 
 
-Finally, we learned about data management, that it is best to create a data management plan before starting research, and how to manage your data in a way that means it will continue to usable by you, your colleagues, and the general public, as long as such accessibility has been checked by the CARE principles. 
+Finally, we learned about **data management**, that it is best to create a data management plan before starting research, and how to manage your data in a way that means it will continue to usable by you, your colleagues, and the general public, as long as such accessibility has been checked by the CARE principles. 
 
-One of the final pieces of making your science reproducible is making sure your data and code are accessible, again and importantly considering the FAIR and CARE principles. During this tutorial, we will introduce Git and Github, which will help make your science more reproducible. Early in this semester, we were given a definition of reproducible science that included having data and code be publicly available.
+One of the final pieces of making your science **reproducible** is making sure your **data and code are accessible far into the future**, and importantly considering the FAIR and CARE principles. During this tutorial, we will introduce **Git** and **Github**, which will help make your science more reproducible. 
 
 ## Git and GitHub
 
-Git is a version control system, which keeps track of the changes made to the files stored within it and allows us to return to previous versions. GitHub is the cloud hosting service built on top of Git. It can store data for you remotely, solving the issue of data storage. However, it was not built specifically for researchers, but instead for computer programmers. So at first glance, GitHub can be challenging to understand and use. With some time, the many helpful features of GitHub can become more clear and be used to help us conduct more reproducible research.
+**Git** is a **version control** system, which keeps track of the changes made to the files stored within it and allows us to return to previous versions. **GitHub** is the cloud hosting service built on top of Git. It can store data for you remotely, solving the issue of data storage. However, it was not built specifically for researchers, but instead for computer programmers. So at first glance, GitHub can be challenging to understand and use. With some time, the many helpful features of GitHub can become more clear and be used to help us conduct more **reproducible research**.
 
-One of these features is data storage and access. When you create a project, which GitHub calls a repository, you can store data and code along with a README.md file that can be used to make your file structure even more clear. It can be particularly useful when several collaborators are working on the same project. Github allows files to be shared and edited, and tracks who edited which files and how they edit the files. Researchers unconnected to the project can also suggest changes to files, if the repository is public, which could provide further checks that help make science more reproducible. Github will store versions of your file indefinitely and for free, and will connect to RStudio Projects, which we will discuss today. We created this tutorial with information from [@]
+One of these features is **data storage and access**. When you create a project, which GitHub calls a **repository**, you can store data and code along with a README.md file that can be used to make your file structure even more clear. It can be particularly useful when several collaborators are working on the same project. Github allows files to be shared and edited, and tracks who edited which files and how they edit the files. Researchers unconnected to the project can also suggest changes to files, if the repository is public, which could provide further checks that help make science more **reproducible**. Github will store versions of your file indefinitely and for free, and will connect to RStudio Projects, which we will discuss today. We created this tutorial with information from [@Gandrud2020]
 
 # Day 1
 
@@ -142,7 +146,7 @@ Make sure your settings are up to date by going to Tools –> Global Options –
 
 ### Key Terms
 
-As we work today and for your future Git adventures, here are a few useful terms and their definitions.
+As we work today and for your future Git adventures, here are a few useful terms and their definitions. You can use the search bar embedded in the table to search terms or any words in the definitions for further clarification and assistance. Pay specific attention to the definitions for **Commit**, **Commit message**, **Pull**, **Push**, and **Repository**.
 
 
 ```{r gitterms, eval = T, echo = F, warning = FALSE, message = FALSE, escape = F}
@@ -335,11 +339,10 @@ knitr::include_graphics("Pictures/copy_link.jpg")
 
 ### Committing your changes cautiously
 
-* Do not commit at the same time as your collaborator, Git does not like it. It will break show an error Figure \@ref(fig:redgreen)
-* Make sure the box for the doc/file you are working on is checked before (blue tick) before you push.
-* Write something on the commit box so that your partner can track changes. 
-* To avoid git errors, communicate with your partner when pushing and pulling. 
-* It is good to keep track and not get git confused.  
+* Do not commit at the same time as your collaborator, Git does not like it. It will show an error (Figure \@ref(fig:redgreen)).
+* Make sure the box for the doc/file you are working on is checked before (blue tick) before you push. This stages the file and enables changes to be committed.
+* You will need to write something in the commit box for GitHub to accept the changes and it is helpful to summarize the changes you have made for your future reference and your collaborators. Remember, some of the power of GitHub is that changes can be tracked, but this feature is only helpful when you can easily pick out the version you are looking for from a long list of versions.
+* To avoid accidental merging and overwriting your changes or the changes of your collaborators,  communicate with your them when committing, pushing, and pulling changes. After creating this tutorial, we also found it helpful to have a backup version (not associated with GitHub) saved as well.
 
 
 ```{r redgreen, echo=FALSE, fig.align= 'center', fig.cap="Interface when pushing and committing changes", out.width = '75%'}
@@ -356,9 +359,13 @@ knitr::include_graphics("Pictures/red_green.png")
 * [Activity for Day 2 of the Tutorial](#activity-for-day-2-of-the-tutorial)
 * [Checking out public repositories](#checking-out-public-repositories)
 * [Import data into R from a GitHub repository](#import-data-into-r-from-a-github-repository)
-* [Downloading data, uploading data, importing into RStudio project](#downloading-data,-uploading-data,-importing-into-rstudio-project)
+* [Downloading data, uploading data, importing into RStudio project](#downloading-data-uploading-data-importing-into-rstudio-project)
 
 ### Activity for Day 2 of the Tutorial
+
+In **Day 1**, we learned [Key Terms](#key-terms) for work in **Git** and **GitHub**, made a new repository in GitHub and cloned it into a new RStudio Git version control project, and worked with partners to practice making changes, committing them, pushing changes to the remote GitHub repository, and pulling changes from the **remote GitHub repository** to your **local RStudio project** files.
+
+On **Day 2**, we will look at **GitHub repositories** that are alive and nice examples of how your GitHub repository might look in the future! We will practice importing data from one of these into RStudio, and uploading data into your own GitHub repository.
 
 ### Checking out public repositories
 
@@ -366,7 +373,7 @@ As you read more papers, interact with collaborators, and become a scientist doi
 
 * One example of a public repository is Sven’s repository for this class [Reproducible 603](https://github.com/svenbuerki/EEB603_Reproducible_Science). Following the link, you can see his repository, with all the folders and files inside displayed in a list. If you scroll to the bottom, you can see the README with information about this repository/class.
 
-* Another example of a public repository is one that was made as part of a paper submission. Fiona read a cool microbial ecology paper that tracked the ecological and evolutionary responses of Curtobacterium over an elevation gradient in Southern California. In the paper, there is a section that says Data Availability. Following the [link](https://github.com/alex-b-chase/curtoEvol) to their github, we can see a similar set of folders and files, as well as a README.
+* Another example of a public repository is one that was made as part of a paper submission. Fiona read a cool microbial ecology paper that tracked the ecological and evolutionary responses of Curtobacterium over an elevation gradient in Southern California [@Chase2021]. In the paper, there is a section that says Data Availability. Following the [link](https://github.com/alex-b-chase/curtoEvol) to their github, we can see a similar set of folders and files, as well as a README.
 
 ```{r Chasedata, echo=FALSE, fig.align= 'center', out.width = '50%'}
 knitr::include_graphics("Pictures/Chase_et_al_2021_data_availability.jpg")
@@ -378,33 +385,42 @@ knitr::include_graphics("Pictures/Chase_et_al_2021_data_availability.jpg")
 
 ### Downloading data, uploading data, importing into RStudio project
 
-Download the data file by clicking on the Download raw file button. It will now be on your computer. Practice uploading data to your own GitHub repository by returning to your repository, clicking the add file button next to the green code button, then Upload files in the dropdown. You can drag files into the box or choose your files. Make sure to commit your changes in the section underneath the box. 
+1. Download the data file by clicking on the Download raw file button. It will now be on your computer. 
 
-To import data into RStudio, go to your repository in GitHub. Find the data file we just uploaded and go to the file by clicking on it in the list of files in your repository. Click on the Raw button in the upper left. It should bring you to a page with just the file contents and the url at the top is what you need to copy. Moving back to RStudio, in a new R script, run these lines of code:
+2. Practice uploading data to your own GitHub repository by returning to your repository, clicking the add file button next to the green code button, then Upload files in the dropdown. 
 
-```{r importdata}
+3. You can drag files into the box or choose your files. Make sure to commit your changes in the section underneath the box. 
+
+4. To import data into RStudio, go to your repository in GitHub. 
+
+5. Find the data file we just uploaded and go to the file by clicking on it in the list of files in your repository. 
+
+6. Click on the Raw button in the upper left. 
+
+7. It should bring you to a page with just the file contents and the url at the top is what you need to copy. 
+
+8. Moving back to RStudio, in a new R script, run these lines of code:
+
+```{r importdata, echo=TRUE}
 # Paste URL into url object
 #url <-"PASTE HERE"
 # Download data
 #YOUR_data <- rio::import(url, format = "csv")
 ```
 
-
+You should now see your data file in the environment, ready to be used!
 
 
 # Relevant resources
 
+As a final send-off to all of you (and any future users of this tutorial), here is a list of resources we used to build this tutorial. 
 
-[2nd edition reproducible Research with R and Rstudio](https://englianhu.wordpress.com/wp-content/uploads/2016/01/reproducible-research-with-r-and-studio-2nd-edition.pdf)
+For the latest version of Gandrud's textbook, visit this link which will allow you to search Boise State University's library and download an ebook: [3rd edition reproducuble Research with R and Rstudio](https://boisestate.on.worldcat.org/search?queryString=gandrud%20reproducible&bookReviews=off&idDetect=true&clusterResults=true&groupVariantRecords=false)
 
-[3RD edition reproducuble Research with R and Rstudio](https://boisestate.on.worldcat.org/search?queryString=gandrud%20reproducible&bookReviews=off&idDetect=true&clusterResults=true&groupVariantRecords=false)
+[Github for dummies video](https://www.youtube.com/watch?v=mJ-qvsxPHpY&t=859s)
 
-[Github for dummies](https://www.youtube.com/watch?v=mJ-qvsxPHpY&t=859s)
+[Github control version video](https://www.youtube.com/watch?v=HVsySz-h9r4&t=9s)
 
-[Github control version](https://www.youtube.com/watch?v=HVsySz-h9r4&t=9s)
-
-
-Many scientists have struggled to reproduce their own lab's work as well as work from other labs [@Baker_2016]. However, the survey in @Baker_2016 points to several factors that may contribute to this phenomenon and what may be changed to solve it.
 
 # References
 
