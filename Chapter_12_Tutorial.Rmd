@@ -128,7 +128,7 @@ One of these features is data storage and access. When you create a project, whi
 ## Learning Objectives
 
 * [Set your R Terminal to Git Bash](#set-your-r-terminal-to-git-bash)
-* [Useful terms for working with Git and GitHub](#useful-terms-for-working-with-git-and-github)
+* [Key Terms](#key-terms)
 * [Creating a remote repository in GitHub](#creating-a-remote-repository-in-github)
 * [Creating a local repository in RStudio](#creating-a-local-repository-in-rstudio)
 * [Turn on notifications for push changes](#turn-on-notifications-for-push-changes)
@@ -140,7 +140,7 @@ One of these features is data storage and access. When you create a project, whi
 
 Make sure your settings are up to date by going to Tools –> Global Options –> Terminal –> under the General Tab –> New Terminals Open with: GitBash –> Apply.
 
-### Useful terms for working with Git and GitHub
+### Key Terms
 
 As we work today and for your future Git adventures, here are a few useful terms and their definitions.
 
@@ -149,7 +149,7 @@ As we work today and for your future Git adventures, here are a few useful terms
 ###~~~
 # Read in CSV with recommendations
 ###~~~
-gitterms <- read.csv("Chapter_1_B_National_Academies_Report_Recommendations.csv")
+gitterms <- read.csv("EEB603_Bioinformatics_Deff.csv")
 rownames(gitterms) <- NULL
 ###~~~
 # Preprocess Markdown to HTML
@@ -178,17 +178,9 @@ DT::datatable(gitterms,
               ), 
               rownames = FALSE,
               escape = FALSE) %>%  # Allow HTML rendering
-  DT::formatStyle('Topic', fontWeight = 'bold')
+  DT::formatStyle('Term', fontWeight = 'bold')
 ```
 
-
-```{r definitions}
-definitions <- data.frame(Term = c('Branch', 'Clone', 'Collaborate', 'Commit', 'Commit ID', 'Commit Message', 'Default Branch','Diff','Directory','Force Push','Pull','Push','Repository'), Definition = c("A branch is a parallel version of a repository. It is contained within the repository, but does not affect the primary or main branch allowing you to work freely without disrupting the live version. When you've made the changes you want to make, you can merge your branch back into the main branch to publish your changes.", "A clone is a copy of a repository that lives on your computer instead of on a website's server somewhere, or the act of making that copy. When you make a clone, you can edit the files in your preferred editor and use Git to keep track of your changes without having to be online. The repository you cloned is still connected to the remote version so that you can push your local changes to the remote to keep them synced when you're online.", "A collaborator is a person with read and write access to a repository who has been invited to contribute by the repository owner.", "A commit, or revision, is an individual change to a file (or set of files). When you make a commit to save your work, Git creates a unique ID (a.k.a. the SHA or hash) that allows you to keep record of the specific changes committed along with who made them and when. Commits usually contain a commit message which is a brief description of what changes were made.", "Also known as SHA. A 40-character checksum hash that identifies the commit.", "Short, descriptive text that accompanies a commit and communicates the change the commit is introducing.", "The base branch for new pull requests and code commits in a repository. Each repository has at least one branch, which Git creates when you initialize the repository. The first branch is usually called main, and is often the default branch.", "A diff is the difference in changes between two commits, or saved changes. The diff will visually describe what was added or removed from a file since its last commit.", "A folder containing one or more files or folders. You can create directories to organize the contents of a repository.", "A Git push that overwrites the remote repository with local changes without regard for conflicts."))
-### Plot table and add caption
-knitr::kable(definitions, caption = "Useful definitions when working with Git and GitHub",
-    format = "html") %>%
-    kableExtra::kable_styling(c("striped", "scale_down"))
-```
 
 ### Creating a remote repository in GitHub
 
