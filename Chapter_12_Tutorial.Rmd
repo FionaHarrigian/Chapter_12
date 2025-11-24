@@ -75,10 +75,14 @@ opts_chunk$set(fig.pos = "H")
 
 
 Sven's tips
-Day 1, Day 2 make split clear, make homework or activity clear - done
-headers are learning outcomes, hyper(?)link learning outcomes to each section
-add terms to learning outcomes, make clear what each piece will be for later
-some more context, best way to communicate
+Day 1, Day 2 make split clear, 
+make homework or activity clear - done
+headers are learning outcomes, 
+hyper(?)link learning outcomes to each section
+add terms to learning outcomes, 
+make clear what each piece will be for later
+some more context, 
+best way to communicate
 call attention to pieces with bolding
 images all squished, give space and use numbers, plus more text?
 only include figures if cross referenced in text
@@ -318,7 +322,6 @@ knitr::include_graphics("Pictures/copy_link.jpg")
 
 ```{r redgreen, echo=FALSE, fig.cap="Interface when pushing and committing changes", out.width = '100%'}
 #what does red and green colors mean when you are communicating with your collaborator
-
 knitr::include_graphics("Pictures/red_green.png")
 ```
 
@@ -329,9 +332,9 @@ As you read more papers, interact with collaborators, and become a scientist doi
 
 * One example of a public repository is Sven’s repository for this class [Reproducible 603](https://github.com/svenbuerki/EEB603_Reproducible_Science). Following the link, you can see his repository, with all the folders and files inside displayed in a list. If you scroll to the bottom, you can see the README with information about this repository/class.
 
-* Another example of a public repository is one that was made as part of a paper submission. Fiona read a cool microbial ecology paper that tracked the ecological and evolutionary responses of Curtobacterium over an elevation gradient in Southern California. In the paper, there is a section that says Data Availability. Following the [Link](https://github.com/alex-b-chase/curtoEvol) to their github, we can see a similar set of folders and files, as well as a README.
+* Another example of a public repository is one that was made as part of a paper submission. Fiona read a cool microbial ecology paper that tracked the ecological and evolutionary responses of Curtobacterium over an elevation gradient in Southern California. In the paper, there is a section that says Data Availability. Following the [link](https://github.com/alex-b-chase/curtoEvol) to their github, we can see a similar set of folders and files, as well as a README.
 
-```{r Chasedata, echo=FALSE, out.width = '100%'}
+```{r Chasedata, echo=FALSE, fig.align= 'center', out.width = '50%'}
 knitr::include_graphics("Pictures/Chase_et_al_2021_data_availability.jpg")
 ```
 
