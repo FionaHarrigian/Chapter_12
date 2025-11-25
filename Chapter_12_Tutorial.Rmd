@@ -103,11 +103,17 @@ Finally, we learned about **data management**, that it is best to create a data 
 
 One of the final pieces of making your science **reproducible** is making sure your **data and code are accessible far into the future**, and importantly considering the FAIR and CARE principles. During this tutorial, we will introduce **Git** and **Github**, which will help make your science more reproducible. 
 
+
 ## Git and GitHub
 
 **Git** is a **version control** system, which keeps track of the changes made to the files stored within it and allows us to return to previous versions. **GitHub** is the cloud hosting service built on top of Git. It can store data for you remotely, solving the issue of data storage. However, it was not built specifically for researchers, but instead for computer programmers. So at first glance, GitHub can be challenging to understand and use. With some time, the many helpful features of GitHub can become more clear and be used to help us conduct more **reproducible research**.
 
-One of these features is **data storage and access**. When you create a project, which GitHub calls a **repository**, you can store data and code along with a README.md file that can be used to make your file structure even more clear. It can be particularly useful when several collaborators are working on the same project. Github allows files to be shared and edited, and tracks who edited which files and how they edit the files. Researchers unconnected to the project can also suggest changes to files, if the repository is public, which could provide further checks that help make science more **reproducible**. Github will store versions of your file indefinitely and for free, and will connect to RStudio Projects, which we will discuss today. We created this tutorial with information from [@Gandrud2020]
+One of these features is **data storage and access**. When you create a project, which GitHub calls a **repository**, you can store data and code along with a README.md file that can be used to make your file structure even more clear. It can be particularly useful when several collaborators are working on the same project. Github allows files to be shared and edited, and tracks who edited which files and how they edit the files. Researchers unconnected to the project can also suggest changes to files, if the repository is public, which could provide further checks that help make science more **reproducible**. Github will store versions of your file indefinitely and for free, and will connect to RStudio Projects, which we will discuss today. We created this tutorial with information from [@Gandrud2020].
+
+On **Day 1**, we will learn [Key Terms](#key-terms) for work in **Git** and **GitHub**, make a new repository in GitHub and clone it into a new RStudio Git version control project, and work with partners to practice working with GitHub.
+
+On **Day 2**, we will look at **GitHub repositories** that are alive and nice examples of how your GitHub repository might look in the future! We will practice importing data from one of these into RStudio, and uploading data into your own GitHub repository.
+
 
 # Day 1
 
